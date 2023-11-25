@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Krypton.Toolkit.Suite.Extended.Drawing</name>
+    </assembly>
+    <members>
+        <member name="M:Krypton.Toolkit.Suite.Extended.Common.KryptonKnobUtilities.IsPointinRectangle(System.Drawing.Point,System.Drawing.Rectangle)">
+            <summary>
+            Method which checks is particular point is in rectangle
+            </summary>
+            <param name="p">Point to be Chaecked</param>
+            <param name="r">Rectangle</param>
+            <returns>true is Point is in rectangle, else false</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1913 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SemanticKernel.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.CosineSimilarityOperation">
+            <summary>
+            Extension methods to calculate the cosine similarity between two vectors.
+            </summary>
+            <remarks>
+            https://en.wikipedia.org/wiki/Cosine_similarity
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.CosineSimilarityOperation.CosineSimilarity``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+            <summary>
+            Calculate the cosine similarity between two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.CosineSimilarityOperation.CosineSimilarity``1(System.Span{``0},System.Span{``0})">
+            <summary>
+            Calculate the cosine similarity between two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.CosineSimilarityOperation.CosineSimilarity``1(``0[],``0[])">
+            <summary>
+            Calculate the cosine similarity between two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DivideOperation">
+            <summary>
+            Extension methods for vector division.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DivideOperation.DivideByInPlace``1(System.Span{``0},System.Double)">
+            <summary>
+            Divide all elements of <see cref="T:System.Span`1"/> of type <typeparamref name="TNumber"/> by <paramref name="divisor"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="span">The data vector</param>
+            <param name="divisor">The value to divide by.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DivideOperation.DivideByInPlace``1(``0[],System.Double)">
+            <summary>
+            Divide all elements of an array of type <typeparamref name="TNumber"/> by <paramref name="divisor"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The data vector</param>
+            <param name="divisor">The value to divide by.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DotProductOperation">
+            <summary>
+            Extension methods for vector dot product.
+            </summary>
+            <remarks>
+            https://en.wikipedia.org/wiki/Dot_product
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DotProductOperation.DotProduct``1(System.ReadOnlySpan{``0},System.ReadOnlySpan{``0})">
+            <summary>
+            Calculate the dot products of two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+            <returns>The dot product as a <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DotProductOperation.DotProduct``1(System.Span{``0},System.Span{``0})">
+            <summary>
+            Calculate the dot products of two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+            <returns>The dot product as a <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.DotProductOperation.DotProduct``1(``0[],``0[])">
+            <summary>
+            Calculate the dot products of two vectors of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The first vector.</param>
+            <param name="y">The second vector.</param>
+            <returns>The dot product as a <see cref="T:System.Double"/>.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.EuclideanLengthOperation">
+            <summary>
+            Extension methods to calculate the Euclidean length of a vector.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.EuclideanLengthOperation.EuclideanLength``1(System.ReadOnlySpan{``0})">
+            <summary>
+            Calculate the Euclidean length of a vector of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The vector.</param>
+            <returns>Euclidean length as a <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.EuclideanLengthOperation.EuclideanLength``1(System.Span{``0})">
+            <summary>
+            Calculate the Euclidean length of a vector of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="x">The vector.</param>
+            <returns>Euclidean length as a <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.EuclideanLengthOperation.EuclideanLength``1(``0[])">
+            <summary>
+            Calculate the Euclidean length of a vector of type <typeparamref name="TNumber"/>.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The vector.</param>
+            <returns>Euclidean length as a <see cref="T:System.Double"/></returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.MultiplyOperation">
+            <summary>
+            Extension methods to multiply a vector by a scalar.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.MultiplyOperation.MultiplyByInPlace``1(System.Span{``0},System.Double)">
+            <summary>
+            Multiplies all elements of a vector by the scalar <paramref name="multiplier"/> in-place.
+            Does not allocate new memory.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The input vector.</param>
+            <param name="multiplier">The scalar.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.MultiplyOperation.MultiplyByInPlace``1(``0[],System.Double)">
+            <summary>
+            Multiplies all elements of a vector by the scalar <paramref name="multiplier"/> in-place.
+            Does not allocate new memory.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The input vector.</param>
+            <param name="multiplier">The scalar.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.NormalizeOperation">
+            <summary>
+            Extension methods to normalize a vector.
+            </summary>
+            <remarks>
+            https://en.wikipedia.org/wiki/Unit_vector
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.NormalizeOperation.NormalizeInPlace``1(System.Span{``0})">
+            <summary>
+            Normalizes a vector in-place by dividing all elements by the scalar Euclidean length.
+            The resulting length will be 1.0. Does not allocate new memory.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The input vector.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.NormalizeOperation.NormalizeInPlace``1(``0[])">
+            <summary>
+            Normalizes a vector in-place by dividing all elements by the scalar Euclidean length.
+            The resulting length will be 1.0. Does not allocate new memory.
+            </summary>
+            <typeparam name="TNumber">The unmanaged data type (<see cref="T:System.Single"/>, <see cref="T:System.Double"/> currently supported).</typeparam>
+            <param name="vector">The input vector.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.AI.Embeddings.VectorOperations.SpanExtensions">
+            <summary>
+            Extension methods to convert from array and <see cref="T:System.Span`1"/> to <see cref="T:System.ReadOnlySpan`1"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Kernel">
+            <summary>
+            Semantic kernel class.
+            The kernel provides a skill collection to define native and semantic functions, an orchestrator to execute a list of functions.
+            Semantic functions are automatically rendered and executed using an internal prompt template rendering engine.
+            Future versions will allow to:
+            * customize the rendering engine
+            * include branching logic in the functions pipeline
+            * persist execution state for long running pipelines
+            * distribute pipelines over a network
+            * RPC functions and secure environments, e.g. sandboxing and credentials management
+            * auto-generate pipelines given a higher level goal
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.LoggerFactory">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.Memory">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.Skills">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.PromptTemplateEngine">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.Builder">
+            <summary>
+            Return a new instance of the kernel builder, used to build and configure kernel instances.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Kernel.HttpHandlerFactory">
+            <inheritdoc/>
+        </member>
+        <member name="E:Microsoft.SemanticKernel.Kernel.FunctionInvoking">
+            <inheritdoc/>
+        </member>
+        <member name="E:Microsoft.SemanticKernel.Kernel.FunctionInvoked">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.#ctor(Microsoft.SemanticKernel.SkillDefinition.ISkillCollection,Microsoft.SemanticKernel.Services.IAIServiceProvider,Microsoft.SemanticKernel.TemplateEngine.IPromptTemplateEngine,Microsoft.SemanticKernel.Memory.ISemanticTextMemory,Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Kernel constructor. See KernelBuilder for an easier and less error prone approach to create kernel instances.
+            </summary>
+            <param name="skillCollection">Skill collection</param>
+            <param name="aiServiceProvider">AI Service Provider</param>
+            <param name="promptTemplateEngine">Prompt template engine</param>
+            <param name="memory">Semantic text Memory</param>
+            <param name="httpHandlerFactory"></param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RegisterSemanticFunction(System.String,Microsoft.SemanticKernel.SemanticFunctions.SemanticFunctionConfig)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RegisterSemanticFunction(System.String,System.String,Microsoft.SemanticKernel.SemanticFunctions.SemanticFunctionConfig)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.ImportSkill(System.Object,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RegisterCustomFunction(Microsoft.SemanticKernel.SkillDefinition.ISKFunction)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RegisterMemory(Microsoft.SemanticKernel.Memory.ISemanticTextMemory)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,Microsoft.SemanticKernel.Orchestration.ContextVariables,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(System.String,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(System.Threading.CancellationToken,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(System.String,System.Threading.CancellationToken,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.RunAsync(Microsoft.SemanticKernel.Orchestration.ContextVariables,System.Threading.CancellationToken,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.CreateNewContext">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.GetService``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.Dispose">
+            <summary>
+            Dispose of resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.OnFunctionInvoking(Microsoft.SemanticKernel.SkillDefinition.FunctionView,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Execute the OnFunctionInvoking event handlers.
+            </summary>
+            <param name="functionView">Function view details</param>
+            <param name="context">SKContext before function invocation</param>
+            <returns>FunctionInvokingEventArgs if the event was handled, null otherwise</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.OnFunctionInvoked(Microsoft.SemanticKernel.SkillDefinition.FunctionView,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Execute the OnFunctionInvoked event handlers.
+            </summary>
+            <param name="functionView">Function view details</param>
+            <param name="context">SKContext after function invocation</param>
+            <returns>FunctionInvokedEventArgs if the event was handled, null otherwise</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.ImportSkill(System.Object,System.String,Microsoft.Extensions.Logging.ILogger,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Import a skill into the kernel skill collection, so that semantic functions and pipelines can consume its functions.
+            </summary>
+            <param name="skillInstance">Skill class instance</param>
+            <param name="skillName">Skill name, used to group functions under a shared namespace</param>
+            <param name="logger">Application logger</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>Dictionary of functions imported from the given class instance, case-insensitively indexed by name.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Kernel.Func(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.KernelBuilder">
+            <summary>
+            A builder for Semantic Kernel.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.Create">
+            <summary>
+            Create a new kernel instance
+            </summary>
+            <returns>New kernel instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.Build">
+            <summary>
+            Build a new kernel instance using the settings passed so far.
+            </summary>
+            <returns>Kernel instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithLoggerFactory(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Add a logger to the kernel to be built.
+            </summary>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>Updated kernel builder including the logger.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithMemory(Microsoft.SemanticKernel.Memory.ISemanticTextMemory)">
+            <summary>
+            Add a semantic text memory entity to the kernel to be built.
+            </summary>
+            <param name="memory">Semantic text memory entity to add.</param>
+            <returns>Updated kernel builder including the semantic text memory entity.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithMemory``1(System.Func{Microsoft.Extensions.Logging.ILoggerFactory,``0})">
+            <summary>
+            Add a semantic text memory store factory.
+            </summary>
+            <param name="factory">The store factory.</param>
+            <returns>Updated kernel builder including the semantic text memory entity.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithMemoryStorage(Microsoft.SemanticKernel.Memory.IMemoryStore)">
+            <summary>
+            Add memory storage to the kernel to be built.
+            </summary>
+            <param name="storage">Storage to add.</param>
+            <returns>Updated kernel builder including the memory storage.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithMemoryStorage``1(System.Func{Microsoft.Extensions.Logging.ILoggerFactory,``0})">
+            <summary>
+            Add memory storage factory to the kernel.
+            </summary>
+            <param name="factory">The storage factory.</param>
+            <returns>Updated kernel builder including the memory storage.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithMemoryStorage``1(System.Func{Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory,``0})">
+            <summary>
+            Add memory storage factory to the kernel.
+            </summary>
+            <param name="factory">The storage factory.</param>
+            <returns>Updated kernel builder including the memory storage.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithPromptTemplateEngine(Microsoft.SemanticKernel.TemplateEngine.IPromptTemplateEngine)">
+            <summary>
+            Add prompt template engine to the kernel to be built.
+            </summary>
+            <param name="promptTemplateEngine">Prompt template engine to add.</param>
+            <returns>Updated kernel builder including the prompt template engine.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithHttpHandlerFactory(Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory)">
+            <summary>
+            Add a http handler factory to the kernel to be built.
+            </summary>
+            <param name="httpHandlerFactory">Http handler factory to add.</param>
+            <returns>Updated kernel builder including the http handler factory.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithRetryHandlerFactory(Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory)">
+            <summary>
+            Add a retry handler factory to the kernel to be built.
+            </summary>
+            <param name="httpHandlerFactory">Retry handler factory to add.</param>
+            <returns>Updated kernel builder including the retry handler factory.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithDefaultAIService``1(``0)">
+            <summary>
+            Adds a <typeparamref name="TService"/> instance to the services collection
+            </summary>
+            <param name="instance">The <typeparamref name="TService"/> instance.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithDefaultAIService``1(System.Func{Microsoft.Extensions.Logging.ILoggerFactory,``0})">
+            <summary>
+            Adds a <typeparamref name="TService"/> factory method to the services collection
+            </summary>
+            <param name="factory">The factory method that creates the AI service instances of type <typeparamref name="TService"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithAIService``1(System.String,``0,System.Boolean)">
+            <summary>
+            Adds a <typeparamref name="TService"/> instance to the services collection
+            </summary>
+            <param name="serviceId">The service ID</param>
+            <param name="instance">The <typeparamref name="TService"/> instance.</param>
+            <param name="setAsDefault">Optional: set as the default AI service for type <typeparamref name="TService"/></param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithAIService``1(System.String,System.Func{Microsoft.Extensions.Logging.ILoggerFactory,``0},System.Boolean)">
+            <summary>
+            Adds a <typeparamref name="TService"/> factory method to the services collection
+            </summary>
+            <param name="serviceId">The service ID</param>
+            <param name="factory">The factory method that creates the AI service instances of type <typeparamref name="TService"/>.</param>
+            <param name="setAsDefault">Optional: set as the default AI service for type <typeparamref name="TService"/></param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.WithAIService``1(System.String,System.Func{Microsoft.Extensions.Logging.ILoggerFactory,Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory,``0},System.Boolean)">
+            <summary>
+            Adds a <typeparamref name="TService"/> factory method to the services collection
+            </summary>
+            <param name="serviceId">The service ID</param>
+            <param name="factory">The factory method that creates the AI service instances of type <typeparamref name="TService"/>.</param>
+            <param name="setAsDefault">Optional: set as the default AI service for type <typeparamref name="TService"/></param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.CreateDefaultPromptTemplateEngine(Microsoft.Extensions.Logging.ILoggerFactory)">
+             <summary>
+             Create a default prompt template engine.
+            
+             This is a temporary solution to avoid breaking existing clients.
+             There will be a separate task to add support for registering instances of IPromptTemplateEngine and obsoleting the current approach.
+            
+             </summary>
+             <param name="loggerFactory">Logger factory to be used by the template engine</param>
+             <returns>Instance of <see cref="T:Microsoft.SemanticKernel.TemplateEngine.IPromptTemplateEngine"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelBuilder.GetPromptTemplateEngineType">
+            <summary>
+            Get the prompt template engine type if available
+            </summary>
+            <returns>The type for the prompt template engine if available</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.NullPromptTemplateEngine">
+             <summary>
+             No-operation IPromptTemplateEngine which performs no rendering of the template.
+            
+             This is a temporary solution to avoid breaking existing clients.
+             </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Memory.Collections.MinHeap`1">
+            <summary>
+            Implements the classic 'heap' data structure. By default, the item with the lowest value is at the top of the heap.
+            </summary>
+            <typeparam name="T">Data type.</typeparam>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.MinHeap`1.SortDescending">
+            <summary>
+            Heap Sort in-place.
+            This is destructive. Once you do this, the heap order is lost.
+            The advantage on in-place is that we don't need to do another allocation
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.MinHeap`1.Restore">
+            <summary>
+            Restores heap order
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1">
+            <summary>
+            Structure for storing data which can be scored.
+            </summary>
+            <typeparam name="T">Data type.</typeparam>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.#ctor(`0,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> struct.
+            </summary>
+            <param name="item">The item to be scored.</param>
+            <param name="score">The score of the item.</param>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.Value">
+            <summary>
+            Gets the value of the scored item.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.Score">
+            <summary>
+            Gets the score of the item.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.CompareTo(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Compares the current instance with another instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.
+            </summary>
+            <param name="other">The other instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> to compare with.</param>
+            <returns>A value indicating the relative order of the instances.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.ToString">
+            <summary>
+            Returns a string representation of the current instance.
+            </summary>
+            <returns>A string representation of the current instance.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_Explicit(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})~System.Double">
+            <summary>
+            Converts the score of the current instance to a double.
+            </summary>
+            <param name="src">The current instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_Explicit(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})~`0">
+            <summary>
+            Converts the value of the current instance to the specified type.
+            </summary>
+            <param name="src">The current instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_Implicit(System.Collections.Generic.KeyValuePair{`0,System.Double})~Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0}">
+            <summary>
+            Converts a <see cref="T:System.Collections.Generic.KeyValuePair`2"/> to a <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.
+            </summary>
+            <param name="src">The <see cref="T:System.Collections.Generic.KeyValuePair`2"/> to convert.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.Equals(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether the current instance is equal to another instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.
+            </summary>
+            <param name="other">The other instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> to compare with.</param>
+            <returns>True if the instances are equal, false otherwise.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_Equality(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether two instances of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> are equal.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_Inequality(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether two instances of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> are not equal.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_LessThan(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether the left instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> is less than the right instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_LessThanOrEqual(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether the left instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> is less than or equal to the right instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_GreaterThan(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether the left instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> is greater than the right instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.op_GreaterThanOrEqual(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0},Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Determines whether the left instance of <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/> is greater than or equal to the right instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1.Min">
+            <summary>
+            Returns the minimum possible value of a <see cref="T:Microsoft.SemanticKernel.Memory.Collections.ScoredValue`1"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1">
+            <summary>
+            A collector for Top N matches. Keeps only the best N matches by Score.
+            Automatically flushes out any not in the top N.
+            By default, items are not sorted by score until you call <see cref="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.SortByScore"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1"/> class.
+            </summary>
+            <param name="maxItems">The maximum number of items to keep in the collection.</param>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.MaxItems">
+            <summary>
+            Gets the maximum number of items allowed in the collection.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.Count">
+            <summary>
+            Gets the current number of items in the collection.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.Reset">
+            <summary>
+            Resets the collection, allowing it to be reused.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.Add(Microsoft.SemanticKernel.Memory.Collections.ScoredValue{`0})">
+            <summary>
+            Adds a single scored value to the collection.
+            </summary>
+            <param name="value">The scored value to add.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.Add(`0,System.Double)">
+            <summary>
+            Adds a value with a specified score to the collection.
+            </summary>
+            <param name="value">The value to add.</param>
+            <param name="score">The score associated with the value.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.SortByScore">
+            <summary>
+            Sorts the collection in descending order by score.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.ToList">
+            <summary>
+            Returns a list containing the scored values in the collection.
+            </summary>
+            <returns>A list of scored values.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.Collections.TopNCollection`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+            <returns>An enumerator for the collection.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Memory.SemanticTextMemory">
+            <summary>
+            Implementation of <see cref="T:Microsoft.SemanticKernel.Memory.ISemanticTextMemory"/>. Provides methods to save, retrieve, and search for text information
+            in a semantic memory store.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.#ctor(Microsoft.SemanticKernel.Memory.IMemoryStore,Microsoft.SemanticKernel.AI.Embeddings.ITextEmbeddingGeneration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Memory.SemanticTextMemory"/> class.
+            </summary>
+            <param name="storage">The memory store to use for storing and retrieving data.</param>
+            <param name="embeddingGenerator">The text embedding generator to use for generating embeddings.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.SaveInformationAsync(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.SaveReferenceAsync(System.String,System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.GetAsync(System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.RemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.SearchAsync(System.String,System.String,System.Int32,System.Double,System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.GetCollectionsAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.SemanticTextMemory.Dispose">
+            <summary>
+            Disposes the resources used by the <see cref="T:Microsoft.SemanticKernel.Memory.SemanticTextMemory"/> instance.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Memory.VolatileMemoryStore">
+            <summary>
+            A simple volatile memory embeddings store.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.CreateCollectionAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.DoesCollectionExistAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.GetCollectionsAsync(System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.DeleteCollectionAsync(System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.UpsertAsync(System.String,Microsoft.SemanticKernel.Memory.MemoryRecord,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.UpsertBatchAsync(System.String,System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.Memory.MemoryRecord},System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.GetAsync(System.String,System.String,System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.GetBatchAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.RemoveAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.RemoveBatchAsync(System.String,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.GetNearestMatchesAsync(System.String,System.ReadOnlyMemory{System.Single},System.Int32,System.Double,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves the nearest matches to the given embedding in the specified collection.
+            </summary>
+            <param name="collectionName">The name of the collection to search.</param>
+            <param name="embedding">The embedding to find the nearest matches for.</param>
+            <param name="limit">The maximum number of matches to return.</param>
+            <param name="minRelevanceScore">The minimum relevance score for a match to be included in the results.</param>
+            <param name="withEmbeddings">Whether to include the embeddings in the returned memory records.</param>
+            <param name="cancellationToken">A cancellation token to cancel the operation.</param>
+            <returns>An asynchronous enumerable of memory records and their relevance scores.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.GetNearestMatchAsync(System.String,System.ReadOnlyMemory{System.Single},System.Double,System.Boolean,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Memory.VolatileMemoryStore.TryGetCollection(System.String,System.Collections.Concurrent.ConcurrentDictionary{System.String,Microsoft.SemanticKernel.Memory.MemoryRecord}@,System.Boolean)">
+            <summary>
+            Tries to get the collection with the specified name.
+            </summary>
+            <param name="name">The name of the collection to get.</param>
+            <param name="collection">The retrieved collection, if found.</param>
+            <param name="create">Whether to create the collection if it does not exist.</param>
+            <returns>True if the collection was found or created, false otherwise.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.MemoryConfiguration">
+            <summary>
+            Kernel extension to configure the semantic memory with custom settings
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.MemoryConfiguration.UseMemory(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.Memory.IMemoryStore,System.String)">
+            <summary>
+            Set the semantic memory to use the given memory storage and embeddings service.
+            </summary>
+            <param name="kernel">Kernel instance</param>
+            <param name="storage">Memory storage</param>
+            <param name="embeddingsServiceId">Kernel service id for embedding generation</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.MemoryConfiguration.UseMemory(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.AI.Embeddings.ITextEmbeddingGeneration,Microsoft.SemanticKernel.Memory.IMemoryStore)">
+            <summary>
+            Set the semantic memory to use the given memory storage and embedding generator.
+            </summary>
+            <param name="kernel">Kernel instance</param>
+            <param name="embeddingGenerator">Embedding generator</param>
+            <param name="storage">Memory storage</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Orchestration.ContextVariablesConverter">
+            <summary>
+            Converter for <see cref="T:Microsoft.SemanticKernel.Orchestration.ContextVariables"/> to/from JSON.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Orchestration.ContextVariablesConverter.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Read the JSON and convert to ContextVariables.
+            </summary>
+            <param name="reader">The JSON reader.</param>
+            <param name="typeToConvert">The type to convert.</param>
+            <param name="options">The JSON serializer options.</param>
+            <returns>The deserialized <see cref="T:Microsoft.SemanticKernel.Orchestration.ContextVariables"/>.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Orchestration.ContextVariablesConverter.Write(System.Text.Json.Utf8JsonWriter,Microsoft.SemanticKernel.Orchestration.ContextVariables,System.Text.Json.JsonSerializerOptions)">
+            <summary>
+            Write the ContextVariables to JSON.
+            </summary>
+            <param name="writer">The JSON writer.</param>
+            <param name="value">The <see cref="T:Microsoft.SemanticKernel.Orchestration.ContextVariables"/> to write.</param>
+            <param name="options">The JSON serializer options.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Planning.InstrumentedPlan">
+            <summary>
+            Standard Semantic Kernel callable plan with instrumentation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.InstrumentedPlan.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.InstrumentedPlan.SkillName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.InstrumentedPlan.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.InstrumentedPlan.IsSemantic">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.InstrumentedPlan.RequestSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.#ctor(Microsoft.SemanticKernel.Planning.IPlan,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.InstrumentedPlan"/> class.
+            </summary>
+            <param name="plan">Instance of <see cref="T:Microsoft.SemanticKernel.Planning.IPlan"/> to decorate.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.Describe">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.InvokeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.SetAIConfiguration(Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.SetAIService(System.Func{Microsoft.SemanticKernel.AI.TextCompletion.ITextCompletion})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.SetDefaultSkillCollection(Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Planning.InstrumentedPlan.s_meter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Meter"/> for plan-related metrics.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Planning.InstrumentedPlan.s_executionTimeHistogram">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Histogram`1"/> to measure and track the time of plan execution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Planning.InstrumentedPlan.s_executionTotalCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the total number of plan executions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Planning.InstrumentedPlan.s_executionSuccessCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the number of successful plan executions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Planning.InstrumentedPlan.s_executionFailureCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the number of failed plan executions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.InstrumentedPlan.InvokeWithInstrumentationAsync(System.Func{System.Threading.Tasks.Task{Microsoft.SemanticKernel.Orchestration.SKContext}})">
+            <summary>
+            Wrapper for instrumentation to be used in multiple invocation places.
+            </summary>
+            <param name="func">Delegate to instrument.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Planning.IPlan">
+            <summary>
+            Interface for standard Semantic Kernel callable plan.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Planning.Plan">
+            <summary>
+            Standard Semantic Kernel callable plan.
+            Plan is used to create trees of <see cref="T:Microsoft.SemanticKernel.SkillDefinition.ISKFunction"/>s.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.State">
+            <summary>
+            State of the plan
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.Steps">
+            <summary>
+            Steps of the plan
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.Parameters">
+            <summary>
+            Parameters for the plan, used to pass information to the next step
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.Outputs">
+            <summary>
+            Outputs for the plan, used to pass information to the caller
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.HasNextStep">
+            <summary>
+            Gets whether the plan has a next step.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.NextStepIndex">
+            <summary>
+            Gets the next step index.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.SkillName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.IsSemantic">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.Plan.RequestSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> class with a goal description.
+            </summary>
+            <param name="goal">The goal of the plan used as description.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.#ctor(System.String,Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> class with a goal description and steps.
+            </summary>
+            <param name="goal">The goal of the plan used as description.</param>
+            <param name="steps">The steps to add.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.#ctor(System.String,Microsoft.SemanticKernel.Planning.Plan[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> class with a goal description and steps.
+            </summary>
+            <param name="goal">The goal of the plan used as description.</param>
+            <param name="steps">The steps to add.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.#ctor(Microsoft.SemanticKernel.SkillDefinition.ISKFunction)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> class with a function.
+            </summary>
+            <param name="function">The function to execute.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.#ctor(System.String,System.String,System.String,System.Int32,Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.Orchestration.ContextVariables,System.Collections.Generic.IList{System.String},System.Collections.Generic.IReadOnlyList{Microsoft.SemanticKernel.Planning.Plan})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> class with a function and steps.
+            </summary>
+            <param name="name">The name of the plan.</param>
+            <param name="skillName">The name of the skill.</param>
+            <param name="description">The description of the plan.</param>
+            <param name="nextStepIndex">The index of the next step.</param>
+            <param name="state">The state of the plan.</param>
+            <param name="parameters">The parameters of the plan.</param>
+            <param name="outputs">The outputs of the plan.</param>
+            <param name="steps">The steps of the plan.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.FromJson(System.String,Microsoft.SemanticKernel.Orchestration.SKContext,System.Boolean)">
+            <summary>
+            Deserialize a JSON string into a Plan object.
+            TODO: the context should never be null, it's required internally
+            </summary>
+            <param name="json">JSON string representation of a Plan</param>
+            <param name="context">The context to use for function registrations.</param>
+            <param name="requireFunctions">Whether to require functions to be registered. Only used when context is not null.</param>
+            <returns>An instance of a Plan object.</returns>
+            <remarks>If Context is not supplied, plan will not be able to execute.</remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.ToJson(System.Boolean)">
+            <summary>
+            Get JSON representation of the plan.
+            </summary>
+            <param name="indented">Whether to emit indented JSON</param>
+            <returns>Plan serialized using JSON format</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.AddSteps(Microsoft.SemanticKernel.Planning.Plan[])">
+            <summary>
+            Adds one or more existing plans to the end of the current plan as steps.
+            </summary>
+            <param name="steps">The plans to add as steps to the current plan.</param>
+            <remarks>
+            When you add a plan as a step to the current plan, the steps of the added plan are executed after the steps of the current plan have completed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.AddSteps(Microsoft.SemanticKernel.SkillDefinition.ISKFunction[])">
+            <summary>
+            Adds one or more new steps to the end of the current plan.
+            </summary>
+            <param name="steps">The steps to add to the current plan.</param>
+            <remarks>
+            When you add a new step to the current plan, it is executed after the previous step in the plan has completed. Each step can be a function call or another plan.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.RunNextStepAsync(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.Orchestration.ContextVariables,System.Threading.CancellationToken)">
+            <summary>
+            Runs the next step in the plan using the provided kernel instance and variables.
+            </summary>
+            <param name="kernel">The kernel instance to use for executing the plan.</param>
+            <param name="variables">The variables to use for the execution of the plan.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>A task representing the asynchronous execution of the plan's next step.</returns>
+            <remarks>
+            This method executes the next step in the plan using the specified kernel instance and context variables.
+            The context variables contain the necessary information for executing the plan, such as the skills, and logger.
+            The method returns a task representing the asynchronous execution of the plan's next step.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.InvokeNextStepAsync(Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <summary>
+            Invoke the next step of the plan
+            </summary>
+            <param name="context">Context to use</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>The updated plan</returns>
+            <exception cref="T:Microsoft.SemanticKernel.Diagnostics.SKException">If an error occurs while running the plan</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.Describe">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.InvokeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.SetDefaultSkillCollection(Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.SetAIService(System.Func{Microsoft.SemanticKernel.AI.TextCompletion.ITextCompletion})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.SetAIConfiguration(Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.ExpandFromVariables(Microsoft.SemanticKernel.Orchestration.ContextVariables,System.String)">
+            <summary>
+            Expand variables in the input string.
+            </summary>
+            <param name="variables">Variables to use for expansion.</param>
+            <param name="input">Input string to expand.</param>
+            <returns>Expanded string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.SetAvailableFunctions(Microsoft.SemanticKernel.Planning.Plan,Microsoft.SemanticKernel.Orchestration.SKContext,System.Boolean)">
+            <summary>
+            Set functions for a plan and its steps.
+            </summary>
+            <param name="plan">Plan to set functions for.</param>
+            <param name="context">Context to use.</param>
+            <param name="requireFunctions">Whether to throw an exception if a function is not found.</param>
+            <returns>The plan with functions set.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.AddVariablesToContext(Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Add any missing variables from a plan state variables to the context.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.UpdateContextWithOutputs(Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Update the context with the outputs from the current step.
+            </summary>
+            <param name="context">The context to update.</param>
+            <returns>The updated context.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.Plan.GetNextStepVariables(Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.Planning.Plan)">
+            <summary>
+            Get the variables for the next step in the plan.
+            </summary>
+            <param name="variables">The current context variables.</param>
+            <param name="step">The next step in the plan.</param>
+            <returns>The context variables for the next step in the plan.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Planning.PlanExtensions">
+            <summary>
+            Extension methods for <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> type.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.PlanExtensions.ToSafePlanString(Microsoft.SemanticKernel.Planning.Plan,System.String)">
+            <summary>
+            Constructs string representation of <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> without sensitive data.
+            </summary>
+            <param name="plan">Instance of <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> for string construction.</param>
+            <param name="indent">Optional indentation.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.PlanExtensions.ToPlanString(Microsoft.SemanticKernel.Planning.Plan,System.String)">
+            <summary>
+            Constructs string representation of <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/>.
+            </summary>
+            <param name="plan">Instance of <see cref="T:Microsoft.SemanticKernel.Planning.Plan"/> for string construction.</param>
+            <param name="indent">Optional indentation.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Planning.PlanExtensions.WithInstrumentation(Microsoft.SemanticKernel.Planning.IPlan,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Returns decorated instance of <see cref="T:Microsoft.SemanticKernel.Planning.IPlan"/> with enabled instrumentation.
+            </summary>
+            <param name="plan">Instance of <see cref="T:Microsoft.SemanticKernel.Planning.IPlan"/> to decorate.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Planning.PlannerConfigBase">
+            <summary>
+            Base class for planner configs
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.PlannerConfigBase.ExcludedSkills">
+            <summary>
+            A list of skills to exclude from the plan creation request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Planning.PlannerConfigBase.ExcludedFunctions">
+            <summary>
+            A list of functions to exclude from the plan creation request.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.KernelPlanExtensions">
+            <summary>
+            Extension methods for running plans using a kernel
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelPlanExtensions.ImportPlan(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.Planning.Plan)">
+            <summary>
+            Import a plan into the kernel
+            </summary>
+            <param name="kernel">Kernel instance to use</param>
+            <param name="plan">Plan to import</param>
+            <returns>Function definition for the plan</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelPlanExtensions.ImportPlanFromJson(Microsoft.SemanticKernel.IKernel,System.String)">
+            <summary>
+            Import a plan into the kernel
+            </summary>
+            <param name="kernel">Kernel instance to use</param>
+            <param name="json">Json representation of the plan</param>
+            <returns>Function definition for the plan</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelPlanExtensions.StepAsync(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.Planning.Plan,System.Threading.CancellationToken)">
+            <summary>
+            Run the next step in a plan asynchronously
+            </summary>
+            <param name="kernel">Kernel instance to use</param>
+            <param name="plan">Plan to run</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>Result of the plan execution</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelPlanExtensions.StepAsync(Microsoft.SemanticKernel.IKernel,System.String,Microsoft.SemanticKernel.Planning.Plan,System.Threading.CancellationToken)">
+            <summary>
+            Run the next step in a plan asynchronously
+            </summary>
+            <param name="kernel">Kernel instance to use</param>
+            <param name="input">Input to use</param>
+            <param name="plan">Plan to run</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.KernelPlanExtensions.StepAsync(Microsoft.SemanticKernel.IKernel,Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.Planning.Plan,System.Threading.CancellationToken)">
+            <summary>
+            Run the next step in a plan asynchronously
+            </summary>
+            <param name="kernel">Kernel instance to use</param>
+            <param name="variables">Input to process</param>
+            <param name="plan">Plan to run</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>Result of the plan execution</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandlerFactory">
+            <summary>
+            A factory for creating instances of <see cref="T:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandler"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandlerFactory.Create(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Creates a new instance of <see cref="T:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandler"/>.
+            </summary>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>A new instance of <see cref="T:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandler"/>.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Reliability.NullHttpRetryHandler">
+            <summary>
+            A HTTP retry handler that does not retry.
+            </summary>
+            <remarks>
+            This handler is useful when you want to disable retry functionality in your HTTP requests.
+            </remarks>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SemanticFunctions.PromptTemplate">
+            <summary>
+            Prompt template.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SemanticFunctions.PromptTemplate.#ctor(System.String,Microsoft.SemanticKernel.SemanticFunctions.PromptTemplateConfig,Microsoft.SemanticKernel.IKernel)">
+            <summary>
+            Constructor for PromptTemplate.
+            </summary>
+            <param name="template">Template.</param>
+            <param name="promptTemplateConfig">Prompt template configuration.</param>
+            <param name="kernel">Kernel in which template is to take effect.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SemanticFunctions.PromptTemplate.#ctor(System.String,Microsoft.SemanticKernel.SemanticFunctions.PromptTemplateConfig,Microsoft.SemanticKernel.TemplateEngine.IPromptTemplateEngine)">
+            <summary>
+            Constructor for PromptTemplate.
+            </summary>
+            <param name="template">Template.</param>
+            <param name="promptTemplateConfig">Prompt template configuration.</param>
+            <param name="promptTemplateEngine">Prompt template engine.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SemanticFunctions.PromptTemplate.GetParameters">
+            <summary>
+            Get the list of parameters used by the function, using JSON settings and template variables.
+            TODO: consider caching results - though cache invalidation will add extra complexity
+            </summary>
+            <returns>List of parameters</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SemanticFunctions.PromptTemplate.RenderAsync(Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <summary>
+            Render the template using the information in the context
+            </summary>
+            <param name="executionContext">Kernel execution context helpers</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>Prompt rendered to string</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Services.AIServiceCollection">
+            <summary>
+            A collection of AI services that can be registered and built into an <see cref="T:Microsoft.SemanticKernel.Services.IAIServiceProvider"/>.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceCollection.SetService``1(``0)">
+            <summary>
+            Registers a singleton service instance with the default name.
+            </summary>
+            <typeparam name="T">The type of the service.</typeparam>
+            <param name="service">The service instance.</param>
+            <exception cref="T:System.ArgumentNullException">The service instance is null.</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceCollection.SetService``1(System.String,``0,System.Boolean)">
+            <summary>
+            Registers a singleton service instance with an optional name and default flag.
+            </summary>
+            <typeparam name="T">The type of the service.</typeparam>
+            <param name="name">The name of the service, or null for the default service.</param>
+            <param name="service">The service instance.</param>
+            <param name="setAsDefault">Whether the service should be the default for its type.</param>
+            <exception cref="T:System.ArgumentNullException">The service instance is null.</exception>
+            <exception cref="T:System.ArgumentException">The name is empty or whitespace.</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceCollection.SetService``1(System.Func{``0})">
+            <summary>
+            Registers a transient service factory with the default name.
+            </summary>
+            <typeparam name="T">The type of the service.</typeparam>
+            <param name="factory">The factory function to create the service instance.</param>
+            <exception cref="T:System.ArgumentNullException">The factory function is null.</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceCollection.SetService``1(System.String,System.Func{``0},System.Boolean)">
+            <summary>
+            Registers a transient service factory with an optional name and default flag.
+            </summary>
+            <typeparam name="T">The type of the service.</typeparam>
+            <param name="name">The name of the service, or null for the default service.</param>
+            <param name="factory">The factory function to create the service instance.</param>
+            <param name="setAsDefault">Whether the service should be the default for its type.</param>
+            <exception cref="T:System.ArgumentNullException">The factory function is null.</exception>
+            <exception cref="T:System.ArgumentException">The name is empty or whitespace.</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceCollection.Build">
+            <summary>
+            Builds an <see cref="T:Microsoft.SemanticKernel.Services.IAIServiceProvider"/> from the registered services and default names.
+            </summary>
+            <returns>An <see cref="T:Microsoft.SemanticKernel.Services.IAIServiceProvider"/> containing the registered services.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Services.AIServiceProvider">
+            <summary>
+            Provides AI services by managing a collection of named service instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.AIServiceProvider.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.Dictionary{System.String,System.Func{System.Object}}},System.Collections.Generic.Dictionary{System.Type,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Services.AIServiceProvider"/> class.
+            </summary>
+            <param name="services">A dictionary of service types and their corresponding named instances.</param>
+            <param name="defaultIds">A dictionary of service types and their default instance names.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Services.NamedServiceProvider`1">
+            <summary>
+            Provides named services of type <typeparamref name="TService"/>. Allows for the registration and retrieval of services by name.
+            </summary>
+            <typeparam name="TService">The type of service provided by this provider.</typeparam>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.NamedServiceProvider`1.#ctor(System.Collections.Generic.Dictionary{System.Type,System.Collections.Generic.Dictionary{System.String,System.Func{System.Object}}},System.Collections.Generic.Dictionary{System.Type,System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Services.NamedServiceProvider`1"/> class.
+            </summary>
+            <param name="services">A dictionary that maps a service type to a nested dictionary of names and service instances or factories.</param>
+            <param name="defaultIds">A dictionary that maps a service type to the name of the default service.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.NamedServiceProvider`1.GetService``1(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.NamedServiceProvider`1.GetDefaultServiceName``1">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Services.ServiceConfig">
+            <summary>
+            Represents a base class for service configurations.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.Services.ServiceConfig.ServiceId">
+            <summary>
+            Gets the identifier used to map semantic functions to AI services,
+            decoupling prompts configurations from the actual provider and model used.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Services.ServiceConfig.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Services.ServiceConfig" /> class with the supplied values.
+            </summary>
+            <param name="serviceId">An identifier used to map semantic functions to AI services and models.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.ImportSemanticSkillFromDirectoryExtension">
+            <summary>
+            Class for extensions methods for importing semantic functions from a directory.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.ImportSemanticSkillFromDirectoryExtension.ImportSemanticSkillFromDirectory(Microsoft.SemanticKernel.IKernel,System.String,System.String[])">
+             <summary>
+             Loads semantic functions, defined by prompt templates stored in the filesystem.
+             </summary>
+             <remarks>
+             <para>
+             A skill directory contains a set of subdirectories, one for each semantic function.
+             </para>
+             <para>
+             This method accepts the path of the parent directory (e.g. "d:\skills") and the name of the skill directory
+             (e.g. "OfficeSkill"), which is used also as the "skill name" in the internal skill collection (note that
+             skill and function names can contain only alphanumeric chars and underscore).
+             </para>
+             <code>
+             Example:
+             D:\skills\                            # parentDirectory = "D:\skills"
+            
+                 |__ OfficeSkill\                  # skillDirectoryName = "SummarizeEmailThread"
+            
+                     |__ ScheduleMeeting           # semantic function
+                         |__ skprompt.txt          # prompt template
+                         |__ config.json           # settings (optional file)
+            
+                     |__ SummarizeEmailThread      # semantic function
+                         |__ skprompt.txt          # prompt template
+                         |__ config.json           # settings (optional file)
+            
+                     |__ MergeWordAndExcelDocs     # semantic function
+                         |__ skprompt.txt          # prompt template
+                         |__ config.json           # settings (optional file)
+            
+                 |__ XboxSkill\                    # another skill, etc.
+            
+                     |__ MessageFriend
+                         |__ skprompt.txt
+                         |__ config.json
+                     |__ LaunchGame
+                         |__ skprompt.txt
+                         |__ config.json
+             </code>
+             <para>
+             See https://github.com/microsoft/semantic-kernel/tree/main/samples/skills for examples in the Semantic Kernel repository.
+             </para>
+             </remarks>
+             <param name="kernel">Semantic Kernel instance</param>
+             <param name="parentDirectory">Directory containing the skill directory, e.g. "d:\myAppSkills"</param>
+             <param name="skillDirectoryNames">Name of the directories containing the selected skills, e.g. "StrategySkill"</param>
+             <returns>A list of all the semantic functions found in the directory, indexed by function name.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.InlineFunctionsDefinitionExtension">
+            <summary>
+            Class for extensions methods to define semantic functions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.InlineFunctionsDefinitionExtension.CreateSemanticFunction(Microsoft.SemanticKernel.IKernel,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Double,System.Double,System.Double,System.Double,System.Collections.Generic.IEnumerable{System.String},System.String,System.String)">
+            <summary>
+            Define a string-to-string semantic function, with no direct support for input context.
+            The function can be referenced in templates and will receive the context, but when invoked programmatically you
+            can only pass in a string in input and receive a string in output.
+            </summary>
+            <param name="kernel">Semantic Kernel instance</param>
+            <param name="promptTemplate">Plain language definition of the semantic function, using SK template language</param>
+            <param name="functionName">A name for the given function. The name can be referenced in templates and used by the pipeline planner.</param>
+            <param name="skillName">Optional skill name, for namespacing and avoid collisions</param>
+            <param name="description">Optional description, useful for the planner</param>
+            <param name="maxTokens">Max number of tokens to generate</param>
+            <param name="temperature">Temperature parameter passed to LLM</param>
+            <param name="topP">Top P parameter passed to LLM</param>
+            <param name="presencePenalty">Presence Penalty parameter passed to LLM</param>
+            <param name="frequencyPenalty">Frequency Penalty parameter passed to LLM</param>
+            <param name="stopSequences">Strings the LLM will detect to stop generating (before reaching max tokens)</param>
+            <param name="chatSystemPrompt">When provided will be used to set the system prompt while using Chat Completions</param>
+            <param name="serviceId">When provided will be used to select the AI service used</param>
+            <returns>A function ready to use</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.InlineFunctionsDefinitionExtension.CreateSemanticFunction(Microsoft.SemanticKernel.IKernel,System.String,Microsoft.SemanticKernel.SemanticFunctions.PromptTemplateConfig,System.String,System.String)">
+            <summary>
+            Allow to define a semantic function passing in the definition in natural language, i.e. the prompt template.
+            </summary>
+            <param name="kernel">Semantic Kernel instance</param>
+            <param name="promptTemplate">Plain language definition of the semantic function, using SK template language</param>
+            <param name="config">Optional function settings</param>
+            <param name="functionName">A name for the given function. The name can be referenced in templates and used by the pipeline planner.</param>
+            <param name="skillName">An optional skill name, e.g. to namespace functions with the same name. When empty,
+            the function is added to the global namespace, overwriting functions with the same name</param>
+            <returns>A function ready to use</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.InlineFunctionsDefinitionExtension.InvokeSemanticFunctionAsync(Microsoft.SemanticKernel.IKernel,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Double,System.Double,System.Double,System.Double,System.Collections.Generic.IEnumerable{System.String},System.String,System.String)">
+            <summary>
+            Invoke a semantic function using the provided prompt template.
+            </summary>
+            <param name="kernel">Semantic Kernel instance</param>
+            <param name="promptTemplate">Plain language definition of the semantic function, using SK template language</param>
+            <param name="functionName">A name for the given function. The name can be referenced in templates and used by the pipeline planner.</param>
+            <param name="skillName">Optional skill name, for namespacing and avoid collisions</param>
+            <param name="description">Optional description, useful for the planner</param>
+            <param name="maxTokens">Max number of tokens to generate</param>
+            <param name="temperature">Temperature parameter passed to LLM</param>
+            <param name="topP">Top P parameter passed to LLM</param>
+            <param name="presencePenalty">Presence Penalty parameter passed to LLM</param>
+            <param name="frequencyPenalty">Frequency Penalty parameter passed to LLM</param>
+            <param name="stopSequences">Strings the LLM will detect to stop generating (before reaching max tokens)</param>
+            <param name="chatSystemPrompt">When provided will be used to set the system prompt while using Chat Completions</param>
+            <param name="serviceId">When provided will be used to select the AI service used</param>
+            <returns>A function ready to use</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction">
+            <summary>
+            Standard Semantic Kernel callable function with instrumentation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.SkillName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.IsSemantic">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.RequestSettings">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.#ctor(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initialize a new instance of the <see cref="T:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction"/> class.
+            </summary>
+            <param name="function">Instance of <see cref="T:Microsoft.SemanticKernel.SkillDefinition.ISKFunction"/> to decorate.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.Describe">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.InvokeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.SetAIConfiguration(Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.SetAIService(System.Func{Microsoft.SemanticKernel.AI.TextCompletion.ITextCompletion})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.SetDefaultSkillCollection(Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.s_activitySource">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.ActivitySource"/> for function-related activities.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.s_meter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Meter"/> for function-related metrics.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction._executionTimeHistogram">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Histogram`1"/> to measure and track the time of function execution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction._executionTotalCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the total number of function executions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction._executionSuccessCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the number of successful function executions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction._executionFailureCounter">
+            <summary>
+            Instance of <see cref="T:System.Diagnostics.Metrics.Counter`1"/> to keep track of the number of failed function executions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.InstrumentedSKFunction.InvokeWithInstrumentationAsync(System.Func{System.Threading.Tasks.Task{Microsoft.SemanticKernel.Orchestration.SKContext}})">
+            <summary>
+            Wrapper for instrumentation to be used in multiple invocation places.
+            </summary>
+            <param name="func">Delegate to instrument.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollectionTypeProxy">
+            <summary>
+            Debugger type proxy for <see cref="T:Microsoft.SemanticKernel.SkillDefinition.SkillCollection"/>.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.NativeFunction">
+            <summary>
+            Standard Semantic Kernel callable function.
+            SKFunction is used to extend one C# <see cref="T:System.Delegate"/>, <see cref="T:System.Func`2"/>, <see cref="T:System.Action"/>,
+            with additional methods required by the kernel.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.SkillName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.IsSemantic">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.RequestSettings">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.Parameters">
+            <summary>
+            List of function parameters
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.FromNativeMethod(System.Reflection.MethodInfo,System.Object,System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a native function instance, wrapping a native object method
+            </summary>
+            <param name="method">Signature of the method to invoke</param>
+            <param name="target">Object containing the method to invoke</param>
+            <param name="skillName">SK skill name</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>SK function instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.FromNativeFunction(System.Delegate,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.SkillDefinition.ParameterView},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a native function instance, wrapping a delegate function
+            </summary>
+            <param name="nativeFunction">Function to invoke</param>
+            <param name="skillName">SK skill name</param>
+            <param name="functionName">SK function name</param>
+            <param name="description">SK function description</param>
+            <param name="parameters">SK function parameters</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>SK function instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.Describe">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.InvokeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.SetDefaultSkillCollection(Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.SetAIService(System.Func{Microsoft.SemanticKernel.AI.TextCompletion.ITextCompletion})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.SetAIConfiguration(Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.Dispose">
+            <summary>
+            Dispose of resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.ToString">
+            <summary>
+            JSON serialized string representation of the function.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.ToString(System.Boolean)">
+            <summary>
+            JSON serialized string representation of the function.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.ThrowNotSemantic">
+            <summary>
+            Throw an exception if the function is not semantic, use this method when some logic makes sense only for semantic functions.
+            </summary>
+            <exception cref="T:Microsoft.SemanticKernel.Diagnostics.SKException"></exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.IsAsyncMethod(System.Reflection.MethodInfo)">
+            <summary>Gets whether a method has a known async return type.</summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.GetParameterMarshalerDelegate(System.Reflection.MethodInfo,System.Reflection.ParameterInfo,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@)">
+            <summary>
+            Gets a delegate for handling the marshaling of a parameter.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.GetReturnValueMarshalerDelegate(System.Reflection.MethodInfo)">
+            <summary>
+            Gets a delegate for handling the result value of a method, converting it into the <see cref="T:System.Threading.Tasks.Task`1"/> to return from the invocation.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.GetExceptionForInvalidSignature(System.Reflection.MethodInfo,System.String)">
+            <summary>Gets an exception that can be thrown indicating an invalid signature.</summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.ThrowForInvalidSignatureIf(System.Boolean,System.Reflection.MethodInfo,System.String)">
+            <summary>Throws an exception indicating an invalid SKFunction signature if the specified condition is not met.</summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.TrackUniqueParameterType(System.Boolean@,System.Reflection.MethodInfo,System.String)">
+            <summary>Tracks whether a particular kind of parameter has been seen, throwing an exception if it has, and marking it as seen if it hasn't</summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.GetParser(System.Type)">
+            <summary>
+            Gets a TypeConverter-based parser for parsing a string as the target type.
+            </summary>
+            <param name="targetType">Specifies the target type into which a string should be parsed.</param>
+            <returns>The parsing function if the target type is supported; otherwise, null.</returns>
+            <remarks>
+            The parsing function uses whatever TypeConverter is registered for the target type.
+            Parsing is first attempted using the current culture, and if that fails, it tries again
+            with the invariant culture. If both fail, an exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.GetFormatter(System.Type)">
+            <summary>
+            Gets a TypeConverter-based formatter for formatting an object as a string.
+            </summary>
+            <remarks>
+            Formatting is performed in the invariant culture whenever possible.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.SanitizeMetadataName(System.String)">
+            <summary>
+            Remove characters from method name that are valid in metadata but invalid for SK.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.s_invalidNameCharsRegex">
+            <summary>Regex that flags any character other than ASCII digits or letters or the underscore.</summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.s_parsers">
+            <summary>Parser functions for converting strings to parameter types.</summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.SkillDefinition.NativeFunction.s_formatters">
+            <summary>Formatter functions for converting parameter types to strings.</summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction">
+            <summary>
+            A Semantic Kernel "Semantic" prompt function.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.Name">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.SkillName">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.Description">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.IsSemantic">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.RequestSettings">
+            <inheritdoc/>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.Parameters">
+            <summary>
+            List of function parameters
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.FromSemanticConfig(System.String,System.String,Microsoft.SemanticKernel.SemanticFunctions.SemanticFunctionConfig,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Create a native function instance, given a semantic function configuration.
+            </summary>
+            <param name="skillName">Name of the skill to which the function to create belongs.</param>
+            <param name="functionName">Name of the function to create.</param>
+            <param name="functionConfig">Semantic function configuration.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>SK function instance.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.Describe">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.InvokeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.SetDefaultSkillCollection(Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.SetAIService(System.Func{Microsoft.SemanticKernel.AI.TextCompletion.ITextCompletion})">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.SetAIConfiguration(Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.Dispose">
+            <summary>
+            Dispose of resources.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.ToString">
+            <summary>
+            JSON serialized string representation of the function.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.ToString(System.Boolean)">
+            <summary>
+            JSON serialized string representation of the function.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SemanticFunction.AddDefaultValues(Microsoft.SemanticKernel.Orchestration.ContextVariables)">
+            <summary>Add default values to the context variables if the variable is not defined</summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.SKFunction">
+            <summary>
+            Static helpers to create <seealso cref="T:Microsoft.SemanticKernel.SkillDefinition.ISKFunction"/> instances.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SKFunction.FromNativeMethod(System.Reflection.MethodInfo,System.Object,System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a native function instance, wrapping a native object method
+            </summary>
+            <param name="method">Signature of the method to invoke</param>
+            <param name="target">Object containing the method to invoke</param>
+            <param name="skillName">SK skill name</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>SK function instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SKFunction.FromNativeFunction(System.Delegate,System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Microsoft.SemanticKernel.SkillDefinition.ParameterView},Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a native function instance, wrapping a delegate function
+            </summary>
+            <param name="nativeFunction">Function to invoke</param>
+            <param name="skillName">SK skill name</param>
+            <param name="functionName">SK function name</param>
+            <param name="description">SK function description</param>
+            <param name="parameters">SK function parameters</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>SK function instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SKFunction.FromSemanticConfig(System.String,System.String,Microsoft.SemanticKernel.SemanticFunctions.SemanticFunctionConfig,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Create a native function instance, given a semantic function configuration.
+            </summary>
+            <param name="skillName">Name of the skill to which the function to create belongs.</param>
+            <param name="functionName">Name of the function to create.</param>
+            <param name="functionConfig">Semantic function configuration.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>SK function instance.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.SkillCollection">
+            <summary>
+            Semantic Kernel default skill collection class.
+            The class holds a list of all the functions, native and semantic, known to the kernel instance.
+            The list is used by the planner and when executing pipelines of function compositions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.SkillDefinition.SkillCollection"/> class.
+            </summary>
+            <param name="loggerFactory">The logger factory.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.AddFunction(Microsoft.SemanticKernel.SkillDefinition.ISKFunction)">
+            <summary>
+            Adds a function to the skill collection.
+            </summary>
+            <param name="functionInstance">The function instance to add.</param>
+            <returns>The updated skill collection.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.GetFunction(System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.GetFunction(System.String,System.String)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.TryGetFunction(System.String,Microsoft.SemanticKernel.SkillDefinition.ISKFunction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.TryGetFunction(System.String,System.String,Microsoft.SemanticKernel.SkillDefinition.ISKFunction@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SkillCollection.GetFunctionsView(System.Boolean,System.Boolean)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SkillDefinition.SKFunctionTextExtensions">
+            <summary>
+            Class with extension methods for semantic functions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SkillDefinition.SKFunctionTextExtensions.AggregatePartitionedResultsAsync(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Collections.Generic.List{System.String},Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Extension method to aggregate partitioned results of a semantic function.
+            </summary>
+            <param name="func">Semantic Kernel function</param>
+            <param name="partitionedInput">Input to aggregate.</param>
+            <param name="context">Semantic Kernel context.</param>
+            <returns>Aggregated results.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.SKFunctionExtensions">
+            <summary>
+            Class that holds extension methods for objects implementing ISKFunction.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UseCompletionSettings(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings)">
+            <summary>
+            Configure the LLM settings used by semantic function.
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="settings">Completion settings</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UseMaxTokens(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Nullable{System.Int32})">
+            <summary>
+            Change the LLM Max Tokens configuration
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="maxTokens">Tokens count</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UseTemperature(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Double)">
+            <summary>
+            Change the LLM Temperature configuration
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="temperature">Temperature value</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UseTopP(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Double)">
+            <summary>
+            Change the Max Tokens configuration
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="topP">TopP value</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UsePresencePenalty(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Double)">
+            <summary>
+            Change the Max Tokens configuration
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="presencePenalty">Presence penalty value</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.UseFrequencyPenalty(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.Double)">
+            <summary>
+            Change the Max Tokens configuration
+            </summary>
+            <param name="skFunction">Semantic function</param>
+            <param name="frequencyPenalty">Frequency penalty value</param>
+            <returns>Self instance</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.InvokeAsync(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,Microsoft.SemanticKernel.Orchestration.ContextVariables,Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection,System.Globalization.CultureInfo,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Execute a function allowing to pass the main input separately from the rest of the context.
+            </summary>
+            <param name="function">Function to execute</param>
+            <param name="variables">Input variables for the function</param>
+            <param name="skills">Skills that the function can access</param>
+            <param name="culture">Culture to use for the function execution</param>
+            <param name="settings">LLM completion settings (for semantic functions only)</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>The result of the function execution</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.InvokeAsync(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,System.String,Microsoft.SemanticKernel.SkillDefinition.IReadOnlySkillCollection,System.Globalization.CultureInfo,Microsoft.SemanticKernel.AI.TextCompletion.CompleteRequestSettings,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Execute a function allowing to pass the main input separately from the rest of the context.
+            </summary>
+            <param name="function">Function to execute</param>
+            <param name="input">Input string for the function</param>
+            <param name="skills">Skills that the function can access</param>
+            <param name="culture">Culture to use for the function execution</param>
+            <param name="settings">LLM completion settings (for semantic functions only)</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>The result of the function execution</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.SKFunctionExtensions.WithInstrumentation(Microsoft.SemanticKernel.SkillDefinition.ISKFunction,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Returns decorated instance of <see cref="T:Microsoft.SemanticKernel.SkillDefinition.ISKFunction"/> with enabled instrumentation.
+            </summary>
+            <param name="function">Instance of <see cref="T:Microsoft.SemanticKernel.SkillDefinition.ISKFunction"/> to decorate.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Text.TextChunker">
+            <summary>
+            Split text in chunks, attempting to leave meaning intact.
+            For plain text, split looking at new lines first, then periods, and so on.
+            For markdown, split looking at punctuation first, and so on.
+            </summary>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Text.TextChunker.TokenCounter">
+            <summary>
+            Delegate for counting tokens in a string.
+            </summary>
+            <param name="input">The input string to count tokens in.</param>
+            <returns>The number of tokens in the input string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Text.TextChunker.SplitPlainTextLines(System.String,System.Int32,Microsoft.SemanticKernel.Text.TextChunker.TokenCounter)">
+            <summary>
+            Split plain text into lines.
+            </summary>
+            <param name="text">Text to split</param>
+            <param name="maxTokensPerLine">Maximum number of tokens per line.</param>
+            <param name="tokenCounter">Function to count tokens in a string. If not supplied, the default counter will be used.</param>
+            <returns>List of lines.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Text.TextChunker.SplitMarkDownLines(System.String,System.Int32,Microsoft.SemanticKernel.Text.TextChunker.TokenCounter)">
+            <summary>
+            Split markdown text into lines.
+            </summary>
+            <param name="text">Text to split</param>
+            <param name="maxTokensPerLine">Maximum number of tokens per line.</param>
+            <param name="tokenCounter">Function to count tokens in a string. If not supplied, the default counter will be used.</param>
+            <returns>List of lines.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Text.TextChunker.SplitPlainTextParagraphs(System.Collections.Generic.List{System.String},System.Int32,System.Int32,System.String,Microsoft.SemanticKernel.Text.TextChunker.TokenCounter)">
+            <summary>
+            Split plain text into paragraphs.
+            </summary>
+            <param name="lines">Lines of text.</param>
+            <param name="maxTokensPerParagraph">Maximum number of tokens per paragraph.</param>
+            <param name="overlapTokens">Number of tokens to overlap between paragraphs.</param>
+            <param name="chunkHeader">Text to be prepended to each individual chunk.</param>
+            <param name="tokenCounter">Function to count tokens in a string. If not supplied, the default counter will be used.</param>
+            <returns>List of paragraphs.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Text.TextChunker.SplitMarkdownParagraphs(System.Collections.Generic.List{System.String},System.Int32,System.Int32,System.String,Microsoft.SemanticKernel.Text.TextChunker.TokenCounter)">
+            <summary>
+            Split markdown text into paragraphs.
+            </summary>
+            <param name="lines">Lines of text.</param>
+            <param name="maxTokensPerParagraph">Maximum number of tokens per paragraph.</param>
+            <param name="overlapTokens">Number of tokens to overlap between paragraphs.</param>
+            <param name="chunkHeader">Text to be prepended to each individual chunk.</param>
+            <param name="tokenCounter">Function to count tokens in a string. If not supplied, the default counter will be used.</param>
+            <returns>List of paragraphs.</returns>
+        </member>
+    </members>
+</doc>

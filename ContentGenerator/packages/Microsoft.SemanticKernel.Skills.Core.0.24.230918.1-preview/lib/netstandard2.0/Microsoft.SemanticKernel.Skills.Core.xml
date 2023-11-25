@@ -1,0 +1,1188 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SemanticKernel.Skills.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill">
+            <summary>
+            <para>Semantic skill that enables conversations summarization.</para>
+            </summary>
+            <example>
+            <code>
+            var kernel Kernel.Builder.Build();
+            kernel.ImportSkill(new ConversationSummarySkill(kernel));
+            </code>
+            </example>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill.MaxTokens">
+            <summary>
+            The max tokens to process in a single semantic function call.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill.#ctor(Microsoft.SemanticKernel.IKernel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill"/> class.
+            </summary>
+            <param name="kernel">Kernel instance</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill.SummarizeConversationAsync(System.String,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Given a long conversation transcript, summarize the conversation.
+            </summary>
+            <param name="input">A long conversation transcript.</param>
+            <param name="context">The SKContext for function execution.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill.GetConversationActionItemsAsync(System.String,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Given a long conversation transcript, identify action items.
+            </summary>
+            <param name="input">A long conversation transcript.</param>
+            <param name="context">The SKContext for function execution.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.ConversationSummarySkill.GetConversationTopicsAsync(System.String,Microsoft.SemanticKernel.Orchestration.SKContext)">
+            <summary>
+            Given a long conversation transcript, identify topics.
+            </summary>
+            <param name="input">A long conversation transcript.</param>
+            <param name="context">The SKContext for function execution.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.FileIOSkill">
+            <summary>
+            Read and write from a file.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("file", new FileIOSkill());
+            Examples:
+            {{file.readAsync $path }} => "hello world"
+            {{file.writeAsync}}
+            </example>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.FileIOSkill.ReadAsync(System.String)">
+            <summary>
+            Read a file
+            </summary>
+            <example>
+            {{file.readAsync $path }} => "hello world"
+            </example>
+            <param name="path"> Source file </param>
+            <returns> File content </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.FileIOSkill.WriteAsync(System.String,System.String)">
+            <summary>
+            Write a file
+            </summary>
+            <example>
+            {{file.writeAsync}}
+            </example>
+            <param name="path">The destination file path</param>
+            <param name="content">The file content to write</param>
+            <returns> An awaitable task </returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.HttpSkill">
+            <summary>
+            A skill that provides HTTP functionality.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("http", new HttpSkill());
+            Examples:
+            SKContext.Variables["url"] = "https://www.bing.com"
+            {{http.getAsync $url}}
+            {{http.postAsync $url}}
+            {{http.putAsync $url}}
+            {{http.deleteAsync $url}}
+            </example>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Skills.Core.HttpSkill"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Skills.Core.HttpSkill"/> class.
+            </summary>
+            <param name="client">The HTTP client to use.</param>
+            <remarks>
+            <see cref="T:Microsoft.SemanticKernel.Skills.Core.HttpSkill"/> assumes ownership of the <see cref="T:System.Net.Http.HttpClient"/> instance and will dispose it when the skill is disposed.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.GetAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP GET request to the specified URI and returns the response body as a string.
+            </summary>
+            <param name="uri">URI of the request</param>
+            <param name="cancellationToken">The token to use to request cancellation.</param>
+            <returns>The response body as a string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.PostAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP POST request to the specified URI and returns the response body as a string.
+            </summary>
+            <param name="uri">URI of the request</param>
+            <param name="body">The body of the request</param>
+            <param name="cancellationToken">The token to use to request cancellation.</param>
+            <returns>The response body as a string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.PutAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP PUT request to the specified URI and returns the response body as a string.
+            </summary>
+            <param name="uri">URI of the request</param>
+            <param name="body">The body of the request</param>
+            <param name="cancellationToken">The token to use to request cancellation.</param>
+            <returns>The response body as a string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.DeleteAsync(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP DELETE request to the specified URI and returns the response body as a string.
+            </summary>
+            <param name="uri">URI of the request</param>
+            <param name="cancellationToken">The token to use to request cancellation.</param>
+            <returns>The response body as a string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.HttpSkill.SendRequestAsync(System.String,System.Net.Http.HttpMethod,System.Net.Http.HttpContent,System.Threading.CancellationToken)">
+            <summary>Sends an HTTP request and returns the response content as a string.</summary>
+            <param name="uri">The URI of the request.</param>
+            <param name="method">The HTTP method for the request.</param>
+            <param name="requestContent">Optional request content.</param>
+            <param name="cancellationToken">The token to use to request cancellation.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.MathSkill">
+            <summary>
+            MathSkill provides a set of functions to make Math calculations.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("math", new MathSkill());
+            Examples:
+            {{math.Add}}         => Returns the sum of FirstNumber and SecondNumber (provided in the SKContext)
+            </example>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.MathSkill.Add(System.Int32,System.Int32)">
+            <summary>
+            Returns the Addition result of initial and amount values provided.
+            </summary>
+            <param name="value">Initial value to which to add the specified amount</param>
+            <param name="amount">The amount to add as a string.</param>
+            <returns>The resulting sum as a string.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.MathSkill.Subtract(System.Int32,System.Int32)">
+            <summary>
+            Returns the Sum of two SKContext numbers provided.
+            </summary>
+            <param name="value">Initial value from which to subtract the specified amount</param>
+            <param name="amount">The amount to subtract as a string.</param>
+            <returns>The resulting subtraction as a string.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill">
+            <summary>
+            TextMemorySkill provides a skill to save or recall information from the long or short term memory.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("memory", new TextMemorySkill());
+            Examples:
+            SKContext.Variables["input"] = "what is the capital of France?"
+            {{memory.recall $input }} => "Paris"
+            </example>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.CollectionParam">
+            <summary>
+            Name of the context variable used to specify which memory collection to use.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.RelevanceParam">
+            <summary>
+            Name of the context variable used to specify memory search relevance score.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.KeyParam">
+            <summary>
+            Name of the context variable used to specify a unique key associated with stored information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.LimitParam">
+            <summary>
+            Name of the context variable used to specify the number of memories to recall
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.#ctor(Microsoft.SemanticKernel.Memory.ISemanticTextMemory)">
+            <summary>
+            Creates a new instance of the TextMemorySkill
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.RetrieveAsync(System.String,System.String,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Key-based lookup for a specific memory
+            </summary>
+            <param name="collection">Memories collection associated with the memory to retrieve</param>
+            <param name="key">The key associated with the memory to retrieve.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <example>
+            SKContext.Variables[TextMemorySkill.KeyParam] = "countryInfo1"
+            {{memory.retrieve }}
+            </example>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.RecallAsync(System.String,System.String,System.Nullable{System.Double},System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Semantic search and return up to N memories related to the input text
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "what is the capital of France?"
+            {{memory.recall $input }} => "Paris"
+            </example>
+            <param name="input">The input text to find related memories for.</param>
+            <param name="collection">Memories collection to search.</param>
+            <param name="relevance">The relevance score, from 0.0 to 1.0, where 1.0 means perfect match.</param>
+            <param name="limit">The maximum number of relevant memories to recall.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.SaveAsync(System.String,System.String,System.String,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Save information to semantic memory
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "the capital of France is Paris"
+            SKContext.Variables[TextMemorySkill.KeyParam] = "countryInfo1"
+            {{memory.save $input }}
+            </example>
+            <param name="input">The information to save</param>
+            <param name="collection">Memories collection associated with the information to save</param>
+            <param name="key">The key associated with the information to save</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextMemorySkill.RemoveAsync(System.String,System.String,Microsoft.Extensions.Logging.ILoggerFactory,System.Threading.CancellationToken)">
+            <summary>
+            Remove specific memory
+            </summary>
+            <example>
+            SKContext.Variables[TextMemorySkill.KeyParam] = "countryInfo1"
+            {{memory.remove }}
+            </example>
+            <param name="collection">Memories collection associated with the information to save</param>
+            <param name="key">The key associated with the information to save</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.TextSkill">
+             <summary>
+             TextSkill provides a set of functions to manipulate strings.
+             </summary>
+             <example>
+             Usage: kernel.ImportSkill("text", new TextSkill());
+            
+             Examples:
+             SKContext.Variables["input"] = "  hello world  "
+             {{text.trim $input}} => "hello world"
+             {{text.trimStart $input} => "hello world  "
+             {{text.trimEnd $input} => "  hello world"
+             SKContext.Variables["input"] = "hello world"
+             {{text.uppercase $input}} => "HELLO WORLD"
+             SKContext.Variables["input"] = "HELLO WORLD"
+             {{text.lowercase $input}} => "hello world"
+             </example>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Trim(System.String)">
+            <summary>
+            Trim whitespace from the start and end of a string.
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "  hello world  "
+            {{text.trim $input}} => "hello world"
+            </example>
+            <param name="input"> The string to trim. </param>
+            <returns> The trimmed string. </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.TrimStart(System.String)">
+            <summary>
+            Trim whitespace from the start of a string.
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "  hello world  "
+            {{text.trimStart $input} => "hello world  "
+            </example>
+            <param name="input"> The string to trim. </param>
+            <returns> The trimmed string. </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.TrimEnd(System.String)">
+            <summary>
+            Trim whitespace from the end of a string.
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "  hello world  "
+            {{text.trimEnd $input} => "  hello world"
+            </example>
+            <param name="input"> The string to trim. </param>
+            <returns> The trimmed string. </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Uppercase(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Convert a string to uppercase.
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "hello world"
+            {{text.uppercase $input}} => "HELLO WORLD"
+            </example>
+            <param name="input"> The string to convert. </param>
+            <param name="cultureInfo"> An object that supplies culture-specific casing rules. </param>
+            <returns> The converted string. </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Lowercase(System.String,System.Globalization.CultureInfo)">
+            <summary>
+            Convert a string to lowercase.
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "HELLO WORLD"
+            {{text.lowercase $input}} => "hello world"
+            </example>
+            <param name="input"> The string to convert. </param>
+            <param name="cultureInfo"> An object that supplies culture-specific casing rules. </param>
+            <returns> The converted string. </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Length(System.String)">
+            <summary>
+            Get the length of a string. Returns 0 if null or empty
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "HELLO WORLD"
+            {{text.length $input}} => "11"
+            </example>
+            <param name="input"> The string to get length. </param>
+            <returns>The length size of string (0) if null or empty.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Concat(System.String,System.String)">
+            <summary>
+            Concatenate two strings into one
+            </summary>
+            <example>
+            text = "HELLO "
+            SKContext.Variables["input2"] = "WORLD"
+            Result: "HELLO WORLD"
+            </example>
+            <param name="input">First input to concatenate with</param>
+            <param name="input2">Second input to concatenate with</param>
+            <returns>Concatenation result from both inputs.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TextSkill.Echo(System.String)">
+            <summary>
+            Echo the input string. Useful for capturing plan input for use in multiple functions.
+            </summary>
+            <param name="text">Input string to echo.</param>
+            <returns>The input string.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.TimeSkill">
+            <summary>
+            TimeSkill provides a set of functions to get the current time and date.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("time", new TimeSkill());
+            Examples:
+            {{time.date}}            => Sunday, 12 January, 2031
+            {{time.today}}           => Sunday, 12 January, 2031
+            {{time.now}}             => Sunday, January 12, 2031 9:15 PM
+            {{time.utcNow}}          => Sunday, January 13, 2031 5:15 AM
+            {{time.time}}            => 09:15:07 PM
+            {{time.year}}            => 2031
+            {{time.month}}           => January
+            {{time.monthNumber}}     => 01
+            {{time.day}}             => 12
+            {{time.dayOfMonth}}      => 12
+            {{time.dayOfWeek}}       => Sunday
+            {{time.hour}}            => 9 PM
+            {{time.hourNumber}}      => 21
+            {{time.daysAgo $days}}   => Sunday, January 12, 2025 9:15 PM
+            {{time.lastMatchingDay $dayName}} => Sunday, 7 May, 2023
+            {{time.minute}}          => 15
+            {{time.minutes}}         => 15
+            {{time.second}}          => 7
+            {{time.seconds}}         => 7
+            {{time.timeZoneOffset}}  => -08:00
+            {{time.timeZoneName}}    => PST
+            </example>
+            <remark>
+            Note: the time represents the time on the hw/vm/machine where the kernel is running.
+            TODO: import and use user's timezone
+            </remark>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Date(System.IFormatProvider)">
+            <summary>
+            Get the current date
+            </summary>
+            <example>
+            {{time.date}} => Sunday, 12 January, 2031
+            </example>
+            <returns> The current date </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Today(System.IFormatProvider)">
+            <summary>
+            Get the current date
+            </summary>
+            <example>
+            {{time.today}} => Sunday, 12 January, 2031
+            </example>
+            <returns> The current date </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Now(System.IFormatProvider)">
+            <summary>
+            Get the current date and time in the local time zone"
+            </summary>
+            <example>
+            {{time.now}} => Sunday, January 12, 2025 9:15 PM
+            </example>
+            <returns> The current date and time in the local time zone </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.UtcNow(System.IFormatProvider)">
+            <summary>
+            Get the current UTC date and time
+            </summary>
+            <example>
+            {{time.utcNow}} => Sunday, January 13, 2025 5:15 AM
+            </example>
+            <returns> The current UTC date and time </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Time(System.IFormatProvider)">
+            <summary>
+            Get the current time
+            </summary>
+            <example>
+            {{time.time}} => 09:15:07 PM
+            </example>
+            <returns> The current time </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Year(System.IFormatProvider)">
+            <summary>
+            Get the current year
+            </summary>
+            <example>
+            {{time.year}} => 2025
+            </example>
+            <returns> The current year </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Month(System.IFormatProvider)">
+            <summary>
+            Get the current month name
+            </summary>
+            <example>
+            {time.month}} => January
+            </example>
+            <returns> The current month name </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.MonthNumber(System.IFormatProvider)">
+            <summary>
+            Get the current month number
+            </summary>
+            <example>
+            {{time.monthNumber}} => 01
+            </example>
+            <returns> The current month number </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Day(System.IFormatProvider)">
+            <summary>
+            Get the current day of the month
+            </summary>
+            <example>
+            {{time.day}} => 12
+            </example>
+            <returns> The current day of the month </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.DaysAgo(System.Double,System.IFormatProvider)">
+            <summary>
+            Get the date a provided number of days in the past
+            </summary>
+            <example>
+            SKContext.Variables["input"] = "3"
+            {{time.daysAgo}} => Sunday, January 12, 2025 9:15 PM
+            </example>
+            <returns> The date the provided number of days before today </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.DayOfWeek(System.IFormatProvider)">
+            <summary>
+            Get the current day of the week
+            </summary>
+            <example>
+            {{time.dayOfWeek}} => Sunday
+            </example>
+            <returns> The current day of the week </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Hour(System.IFormatProvider)">
+            <summary>
+            Get the current clock hour
+            </summary>
+            <example>
+            {{time.hour}} => 9 PM
+            </example>
+            <returns> The current clock hour </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.HourNumber(System.IFormatProvider)">
+            <summary>
+            Get the current clock 24-hour number
+            </summary>
+            <example>
+            {{time.hourNumber}} => 21
+            </example>
+            <returns> The current clock 24-hour number </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.DateMatchingLastDayName(System.DayOfWeek,System.IFormatProvider)">
+            <summary>
+            Get the date of the previous day matching the supplied day name
+            </summary>
+            <example>
+            {{time.lastMatchingDay $dayName}} => Sunday, 7 May, 2023
+            </example>
+            <returns> The date of the last instance of this day name </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">dayName is not a recognized name of a day of the week</exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Minute(System.IFormatProvider)">
+            <summary>
+            Get the minutes on the current hour
+            </summary>
+            <example>
+            {{time.minute}} => 15
+            </example>
+            <returns> The minutes on the current hour </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.Second(System.IFormatProvider)">
+            <summary>
+            Get the seconds on the current minute
+            </summary>
+            <example>
+            {{time.second}} => 7
+            </example>
+            <returns> The seconds on the current minute </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.TimeZoneOffset(System.IFormatProvider)">
+            <summary>
+            Get the local time zone offset from UTC
+            </summary>
+            <example>
+            {{time.timeZoneOffset}} => -08:00
+            </example>
+            <returns> The local time zone offset from UTC </returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.TimeSkill.TimeZoneName">
+            <summary>
+            Get the local time zone name
+            </summary>
+            <example>
+            {{time.timeZoneName}} => PST
+            </example>
+            <remark>
+            Note: this is the "current" timezone and it can change over the year, e.g. from PST to PDT
+            </remark>
+            <returns> The local time zone name </returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.WaitSkill">
+            <summary>
+            WaitSkill provides a set of functions to wait before making the rest of operations.
+            </summary>
+            <example>
+            Usage: kernel.ImportSkill("wait", new WaitSkill());
+            Examples:
+            {{wait.seconds 10}}         => Wait 10 seconds
+            </example>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Skills.Core.WaitSkill.IWaitProvider">
+            <summary>
+            Interface for providing wait functionality.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.WaitSkill.IWaitProvider.DelayAsync(System.Int32)">
+            <summary>
+            Delays the execution for a specified number of milliseconds.
+            </summary>
+            <param name="milliSeconds">The number of milliseconds to wait.</param>
+            <returns>A task that represents the asynchronous delay operation.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.WaitSkill.#ctor(Microsoft.SemanticKernel.Skills.Core.WaitSkill.IWaitProvider)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.Skills.Core.WaitSkill"/> class.
+            </summary>
+            <param name="waitProvider">An optional wait provider. If not provided, a default wait provider will be used.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Skills.Core.WaitSkill.SecondsAsync(System.Decimal)">
+            <summary>
+            Wait a given amount of seconds
+            </summary>
+            <example>
+            {{wait.seconds 10}} (Wait 10 seconds)
+            </example>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType">
+            <summary>
+            Contains the values of status codes defined for HTTP in the response to an HTTP request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Continue">
+            <summary>
+            The server has received the request headers and the client should proceed to send the request body.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.SwitchingProtocols">
+            <summary>
+            The server is switching protocols according to the Upgrade header sent by the client.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Processing">
+            <summary>
+            The server is processing the request, but has not completed it yet.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.EarlyHints">
+            <summary>
+            The server is sending some hints about the response before the final status code.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.OK">
+            <summary>
+            The request has succeeded and the response contains the requested resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Created">
+            <summary>
+            The request has been fulfilled and a new resource has been created.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Accepted">
+            <summary>
+            The request has been accepted for further processing, but the processing has not been completed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NonAuthoritativeInformation">
+            <summary>
+            The server is returning a response from a different source than the requested one, but the response is still valid.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NoContent">
+            <summary>
+            The request has been successfully processed, but the server does not need to return any content.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.ResetContent">
+            <summary>
+            The server has fulfilled the request and the client should reset the document view.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.PartialContent">
+            <summary>
+            The server is returning a partial response to a range request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.MultiStatus">
+            <summary>
+            The server is returning a response that contains multiple status codes for different parts of the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.AlreadyReported">
+            <summary>
+            The server has already reported the status of the request and does not need to repeat it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.IMUsed">
+            <summary>
+            The server is returning a response that is the result of applying a delta encoding to the requested resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Ambiguous">
+            <summary>
+            The requested resource has multiple representations and the client should choose one of them.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.MultipleChoices">
+            <summary>
+            The requested resource has multiple representations and the client should choose one of them.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Moved">
+            <summary>
+            The requested resource has been permanently moved to a new location and the client should use the new URI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.MovedPermanently">
+            <summary>
+            The requested resource has been permanently moved to a new location and the client should use the new URI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Found">
+            <summary>
+            The requested resource has been temporarily moved to a new location and the client should use the new URI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Redirect">
+            <summary>
+            The requested resource has been temporarily moved to a new location and the client should use the new URI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RedirectMethod">
+            <summary>
+            The requested resource can be found at a different URI and the client should use a GET method to retrieve it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.SeeOther">
+            <summary>
+            The requested resource can be found at a different URI and the client should use a GET method to retrieve it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NotModified">
+            <summary>
+            The requested resource has not been modified since the last request and the client can use the cached version.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.UseProxy">
+            <summary>
+            The requested resource is only available through a proxy and the client should use the proxy URI.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Unused">
+            <summary>
+            This status code is no longer used and is reserved for future use.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RedirectKeepVerb">
+            <summary>
+            The requested resource has been temporarily moved to a new location and the client should use the same method to access it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.TemporaryRedirect">
+            <summary>
+            The requested resource has been temporarily moved to a new location and the client should use the same method to access it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.PermanentRedirect">
+            <summary>
+            The requested resource has been permanently moved to a new location and the client should use the same method to access it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.BadRequest">
+            <summary>
+            The server cannot process the request due to a malformed syntax or an invalid parameter.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Unauthorized">
+            <summary>
+            The request requires authentication and the client should provide valid credentials.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.PaymentRequired">
+            <summary>
+            The request requires payment and the client should provide valid payment information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Forbidden">
+            <summary>
+            The server has understood the request, but refuses to authorize it due to insufficient permissions or other reasons.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NotFound">
+            <summary>
+            The server cannot find the requested resource and the client should not repeat the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.MethodNotAllowed">
+            <summary>
+            The server does not support the method used by the request and the client should use a different method.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NotAcceptable">
+            <summary>
+            The server cannot produce a response that matches the preferences specified by the request headers.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.ProxyAuthenticationRequired">
+            <summary>
+            The request requires authentication through a proxy and the client should provide valid proxy credentials.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RequestTimeout">
+            <summary>
+            The server did not receive the complete request within the time limit and the client should try again later.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Conflict">
+            <summary>
+            The request could not be completed due to a conflict with the current state of the resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Gone">
+            <summary>
+            The requested resource is no longer available and the server does not know the new location.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.LengthRequired">
+            <summary>
+            The request requires a Content-Length header and the client should provide it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.PreconditionFailed">
+            <summary>
+            The request does not meet the preconditions specified by the request headers and the server cannot process it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RequestEntityTooLarge">
+            <summary>
+            The request entity is too large and the server cannot process it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RequestUriTooLong">
+            <summary>
+            The request URI is too long and the server cannot process it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.UnsupportedMediaType">
+            <summary>
+            The request entity has a media type that the server does not support or cannot handle.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RequestedRangeNotSatisfiable">
+            <summary>
+            The request specifies a range that the server cannot satisfy or is invalid.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.ExpectationFailed">
+            <summary>
+            The request contains an Expect header that the server cannot meet or is invalid.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.MisdirectedRequest">
+            <summary>
+            The request was directed to a server that is not able to produce a response.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.UnprocessableEntity">
+            <summary>
+            The request entity is well-formed, but cannot be processed by the server due to semantic errors.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.Locked">
+            <summary>
+            The requested resource is locked and the client should release it before modifying it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.FailedDependency">
+            <summary>
+            The request failed due to a dependency on another request that failed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.UpgradeRequired">
+            <summary>
+            The request requires the server to upgrade to a different protocol and the client should use the Upgrade header to specify it.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.PreconditionRequired">
+            <summary>
+            The request requires the server to apply preconditions and the client should use the If-Match or If-Unmodified-Since headers to specify them.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.TooManyRequests">
+            <summary>
+            The client has sent too many requests in a given time and the server rejects them to prevent overload.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.RequestHeaderFieldsTooLarge">
+            <summary>
+            The request contains headers that are too large and the server cannot process them.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.UnavailableForLegalReasons">
+            <summary>
+            The server is denying access to the requested resource for legal reasons and the client should not repeat the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.InternalServerError">
+            <summary>
+            The server encountered an unexpected error and cannot fulfill the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NotImplemented">
+            <summary>
+            The server does not support the functionality required by the request and the client should not repeat the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.BadGateway">
+            <summary>
+            The server received an invalid response from an upstream server and cannot fulfill the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.ServiceUnavailable">
+            <summary>
+            The server is temporarily unavailable due to maintenance or overload and the client should try again later.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.GatewayTimeout">
+            <summary>
+            The server did not receive a timely response from an upstream server and cannot fulfill the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.HttpVersionNotSupported">
+            <summary>
+            The server does not support the HTTP version used by the request and the client should use a different version.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.VariantAlsoNegotiates">
+            <summary>
+            The server has a configuration error and cannot negotiate a suitable representation for the requested resource.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.InsufficientStorage">
+            <summary>
+            The server has insufficient storage space to complete the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.LoopDetected">
+            <summary>
+            The server detected an infinite loop while processing the request.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NotExtended">
+            <summary>
+            The request requires additional extensions that the server does not support or cannot handle.
+            </summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Diagnostics.HttpStatusCodeType.NetworkAuthenticationRequired">
+            <summary>
+            The request requires authentication at the network level and the client should provide valid network credentials.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Diagnostics.Verify.NotNull(System.Object,System.String)">
+            <summary>
+            Equivalent of ArgumentNullException.ThrowIfNull
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.Diagnostics.Verify.ParametersUniqueness(System.Collections.Generic.IList{Microsoft.SemanticKernel.SkillDefinition.ParameterView})">
+            <summary>
+            Make sure every function parameter name is unique
+            </summary>
+            <param name="parameters">List of parameters</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.Text.ReadOnlyMemoryConverter">
+            <summary>Provides a converter for <see cref="T:System.ReadOnlyMemory`1"/>.</summary>
+        </member>
+        <member name="F:Microsoft.SemanticKernel.Text.ReadOnlyMemoryConverter.s_arrayConverter">
+            <summary>An instance of a converter for float[] that all operations delegate to.</summary>
+        </member>
+        <member name="T:System.ExceptionExtensions">
+            <summary>
+            Exception extension methods.
+            </summary>
+        </member>
+        <member name="M:System.ExceptionExtensions.IsCriticalException(System.Exception)">
+            <summary>
+            Check if an exception is of a type that should not be caught by the kernel.
+            </summary>
+            <param name="ex">Exception.</param>
+            <returns>True if <paramref name="ex"/> is a critical exception and should not be caught.</returns>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>Specifies that null is allowed as an input even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>Specifies that null is disallowed as an input even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>Specifies that an output may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>Specifies that an output will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter may be null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified return value condition.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>Specifies that the output will be non-null if the named parameter is non-null.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with the associated parameter name.</summary>
+            <param name="parameterName">
+            The associated parameter name.  The output will be non-null if the argument to the parameter specified is non-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>Gets the associated parameter name.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>Applied to a method that will never return under any circumstance.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>Specifies that the method will not return if the associated Boolean parameter is passed the specified value.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>Initializes the attribute with the specified parameter value.</summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable by diagnostics if the argument to
+            the associated parameter matches this value.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>Gets the condition parameter value.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute">
+            <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)">
+            <summary>Initializes the attribute with a field or property member.</summary>
+            <param name="member">
+            The field or property member that is promised to be not-null.
+            </param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])">
+            <summary>Initializes the attribute with the list of field and property members.</summary>
+            <param name="members">
+            The list of field and property members that are promised to be not-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members">
+            <summary>Gets field or property member names.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute">
+            <summary>Specifies that the method or property will ensure that the listed field and property members have not-null values when returning with the specified return value condition.</summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)">
+            <summary>Initializes the attribute with the specified return value condition and a field or property member.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+            <param name="member">
+            The field or property member that is promised to be not-null.
+            </param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])">
+            <summary>Initializes the attribute with the specified return value condition and list of field and property members.</summary>
+            <param name="returnValue">
+            The return value condition. If the method returns this value, the associated parameter will not be null.
+            </param>
+            <param name="members">
+            The list of field and property members that are promised to be not-null.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members">
+            <summary>Gets field or property member names.</summary>
+        </member>
+        <member name="M:System.Linq.AsyncEnumerable.AnyAsync``1(System.Collections.Generic.IAsyncEnumerable{``0},System.Func{``0,System.Boolean},System.Threading.CancellationToken)">
+            <summary>
+            Determines whether any element of an async-enumerable sequence satisfies a condition.
+            </summary>
+            <typeparam name="TSource">The type of the elements in the source sequence.</typeparam>
+            <param name="source">An async-enumerable sequence whose elements to apply the predicate to.</param>
+            <param name="predicate">A function to test each element for a condition.</param>
+            <param name="cancellationToken">The optional cancellation token to be used for cancelling the sequence at any time.</param>
+            <returns>An async-enumerable sequence containing a single element determining whether any elements in the source sequence pass the test in the specified predicate.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="source"/> or <paramref name="predicate"/> is null.</exception>
+            <remarks>The return type of this operator differs from the corresponding operator on IEnumerable in order to retain asynchronous behavior.</remarks>
+        </member>
+        <member name="M:System.EnvExtensions.GetBoolEnvVar(System.String)">
+            <summary>
+            Source: https://github.com/Azure/azure-sdk-for-net/blob/main/sdk/core/Azure.Core/src/DiagnosticsOptions.cs
+            Values: https://learn.microsoft.com/en-us/dotnet/api/azure.core.diagnosticsoptions.istelemetryenabled?view=azure-dotnet
+            </summary>
+        </member>
+        <member name="M:HttpClientExtensions.SendWithSuccessCheckAsync(System.Net.Http.HttpClient,System.Net.Http.HttpRequestMessage,System.Net.Http.HttpCompletionOption,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP request using the provided <see cref="T:System.Net.Http.HttpClient"/> instance and checks for a successful response.
+            If the response is not successful, it logs an error and throws an <see cref="T:Microsoft.SemanticKernel.Diagnostics.HttpOperationException"/>.
+            </summary>
+            <param name="client">The <see cref="T:System.Net.Http.HttpClient"/> instance to use for sending the request.</param>
+            <param name="request">The <see cref="T:System.Net.Http.HttpRequestMessage"/> to send.</param>
+            <param name="completionOption">Indicates if HttpClient operations should be considered completed either as soon as a response is available,
+            or after reading the entire response message including the content.</param>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken"/> for canceling the request.</param>
+            <returns>The <see cref="T:System.Net.Http.HttpResponseMessage"/> representing the response.</returns>
+        </member>
+        <member name="M:HttpClientExtensions.SendWithSuccessCheckAsync(System.Net.Http.HttpClient,System.Net.Http.HttpRequestMessage,System.Threading.CancellationToken)">
+            <summary>
+            Sends an HTTP request using the provided <see cref="T:System.Net.Http.HttpClient"/> instance and checks for a successful response.
+            If the response is not successful, it logs an error and throws an <see cref="T:Microsoft.SemanticKernel.Diagnostics.HttpOperationException"/>.
+            </summary>
+            <param name="client">The <see cref="T:System.Net.Http.HttpClient"/> instance to use for sending the request.</param>
+            <param name="request">The <see cref="T:System.Net.Http.HttpRequestMessage"/> to send.</param>
+            <param name="cancellationToken">A <see cref="T:System.Threading.CancellationToken"/> for canceling the request.</param>
+            <returns>The <see cref="T:System.Net.Http.HttpResponseMessage"/> representing the response.</returns>
+        </member>
+        <member name="T:HttpClientProvider">
+            <summary>
+            Provides functionality for retrieving instances of HttpClient.
+            </summary>
+        </member>
+        <member name="M:HttpClientProvider.GetHttpClient(Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory,System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Retrieves an instance of HttpClient.
+            </summary>
+            <param name="httpHandlerFactory">The <see cref="T:Microsoft.SemanticKernel.Http.IDelegatingHandlerFactory"/> to be used when the HttpClient is not provided already</param>
+            <param name="httpClient">An optional pre-existing instance of HttpClient.</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <returns>An instance of HttpClient.</returns>
+        </member>
+        <member name="T:HttpContentExtensions">
+            <summary>
+            Provides extension methods for working with HTTP content in a way that translates HttpRequestExceptions into HttpOperationExceptions.
+            </summary>
+        </member>
+        <member name="M:HttpContentExtensions.ReadAsStringWithExceptionMappingAsync(System.Net.Http.HttpContent)">
+            <summary>
+            Reads the content of the HTTP response as a string and translates any HttpRequestException into an HttpOperationException.
+            </summary>
+            <param name="httpContent">The HTTP content to read.</param>
+            <returns>A string representation of the HTTP content.</returns>
+        </member>
+        <member name="M:HttpContentExtensions.ReadAsStreamAndTranslateExceptionAsync(System.Net.Http.HttpContent)">
+            <summary>
+            Reads the content of the HTTP response as a stream and translates any HttpRequestException into an HttpOperationException.
+            </summary>
+            <param name="httpContent">The HTTP content to read.</param>
+            <returns>A stream representing the HTTP content.</returns>
+        </member>
+        <member name="M:HttpContentExtensions.ReadAsByteArrayAndTranslateExceptionAsync(System.Net.Http.HttpContent)">
+            <summary>
+            Reads the content of the HTTP response as a byte array and translates any HttpRequestException into an HttpOperationException.
+            </summary>
+            <param name="httpContent">The HTTP content to read.</param>
+            <returns>A byte array representing the HTTP content.</returns>
+        </member>
+        <member name="T:NonDisposableHttpClientHandler">
+            <summary>
+            Represents a singleton implementation of <see cref="T:System.Net.Http.HttpClientHandler"/> that is not disposable.
+            </summary>
+        </member>
+        <member name="M:NonDisposableHttpClientHandler.#ctor">
+            <summary>
+            Private constructor to prevent direct instantiation of the class.
+            </summary>
+        </member>
+        <member name="P:NonDisposableHttpClientHandler.Instance">
+            <summary>
+            Gets the singleton instance of <see cref="T:NonDisposableHttpClientHandler"/>.
+            </summary>
+        </member>
+        <member name="M:NonDisposableHttpClientHandler.Dispose(System.Boolean)">
+            <summary>
+            Disposes the underlying resources held by the <see cref="T:NonDisposableHttpClientHandler"/>.
+            This implementation does nothing to prevent unintended disposal, as it may affect all references.
+            </summary>
+            <param name="disposing">True if called from <see cref="M:NonDisposableHttpClientHandler.Dispose(System.Boolean)"/>, false if called from a finalizer.</param>
+        </member>
+    </members>
+</doc>

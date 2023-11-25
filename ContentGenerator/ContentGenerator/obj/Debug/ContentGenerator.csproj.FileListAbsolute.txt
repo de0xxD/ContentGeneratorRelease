@@ -1,0 +1,326 @@
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\x86\sqlite3.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\x64\sqlite3.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\MediaInfoX64.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\vcomp140.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_DXP64.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFP64.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFPX64.dll
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Enhancer_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Mixer_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_BaseFilters_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Audio_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Video_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Effects_Pro_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Mixer_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_AsyncEx_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v8_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v9_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MJPEGDec_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MP3_Splitter_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\VSFilter_x64.ax
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe.config
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.SqlServer.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Navigator.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Common.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Developer.Utilities.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Drawing.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Effects.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Tools.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Http.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Primitives.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.SystemEvents.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Asio.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Core.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Midi.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Wasapi.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.WinForms.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\NAudio.WinMM.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\OpenAI.GPT3.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\RestSharp.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.CodeDom.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Configuration.ConfigurationManager.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Data.Odbc.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Data.OleDb.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SqlClient.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SQLite.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.EventLog.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Drawing.Common.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.IO.FileSystem.AccessControl.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Packaging.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Ports.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Net.Http.Json.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.AccessControl.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Cng.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Pkcs.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Xml.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Permissions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Principal.Windows.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceModel.Syndication.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceProcess.ServiceController.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encoding.CodePages.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encodings.Web.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Json.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.AccessControl.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.Tasks.Extensions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Form1.resources
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Properties.Resources.resources
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.GenerateResource.cache
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CoreCompileInputs.cache
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.Fody.CopyLocal.cache
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CopyComplete
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.exe
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.pdb
+H:\ContentGenerator\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.AssemblyReference.cache
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.pdb
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Azure.AI.OpenAI.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Azure.Core.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.HashCode.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Abstractions.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Connectors.AI.OpenAI.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Core.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.ActionPlanner.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.SequentialPlanner.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.StepwisePlanner.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Reliability.Basic.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Skills.Core.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Buffers.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.Data.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.Numerics.Vectors.xml
+H:\ContentGenerator\ContentGenerator\ContentGenerator\bin\Debug\System.ValueTuple.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\x86\sqlite3.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\x64\sqlite3.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\MediaInfoX64.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\vcomp140.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_DXP64.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFP64.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFPX64.dll
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Enhancer_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Mixer_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_BaseFilters_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Audio_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Video_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Effects_Pro_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Mixer_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_AsyncEx_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v8_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v9_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MJPEGDec_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MP3_Splitter_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\VSFilter_x64.ax
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe.config
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.pdb
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Azure.AI.OpenAI.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Azure.Core.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.SqlServer.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Navigator.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Common.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Developer.Utilities.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Drawing.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Effects.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Tools.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.HashCode.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Http.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Abstractions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Connectors.AI.OpenAI.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Core.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.ActionPlanner.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.SequentialPlanner.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.StepwisePlanner.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Reliability.Basic.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Skills.Core.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.SystemEvents.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Asio.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Core.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Midi.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.Wasapi.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.WinForms.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\NAudio.WinMM.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\OpenAI.GPT3.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\RestSharp.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Buffers.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.CodeDom.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Data.Odbc.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Data.OleDb.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SqlClient.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SQLite.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.EventLog.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Drawing.Common.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.IO.FileSystem.AccessControl.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Packaging.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Ports.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.Data.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Net.Http.Json.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Numerics.Vectors.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.AccessControl.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Cng.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Permissions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Principal.Windows.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceModel.Syndication.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceProcess.ServiceController.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encodings.Web.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Json.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.AccessControl.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\bin\Debug\System.ValueTuple.xml
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.AssemblyReference.cache
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.SuggestedBindingRedirects.cache
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Form1.resources
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Properties.Resources.resources
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.GenerateResource.cache
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CoreCompileInputs.cache
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.Fody.CopyLocal.cache
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CopyComplete
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.exe
+C:\Учебное\Универ\3 курс\Сопровождение и продвижение ПО\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.pdb
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\x86\sqlite3.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\x64\sqlite3.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\MediaInfoX64.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\vcomp140.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_DXP64.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFP64.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MFPX64.dll
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Enhancer_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Audio_Mixer_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_BaseFilters_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Audio_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Network_Streamer_Video_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Effects_Pro_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Video_Mixer_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_AsyncEx_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v8_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_Encryptor_v9_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MJPEGDec_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VisioForge_MP3_Splitter_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\VSFilter_x64.ax
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe.config
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.pdb
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\EntityFramework.SqlServer.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Navigator.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Common.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Developer.Utilities.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Drawing.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Effects.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Krypton.Toolkit.Suite.Extended.Tools.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Http.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Options.ConfigurationExtensions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Primitives.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.Registry.AccessControl.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Win32.SystemEvents.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\OpenAI.GPT3.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\RestSharp.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.CodeDom.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Configuration.ConfigurationManager.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Data.Odbc.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Data.OleDb.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SqlClient.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Data.SQLite.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.EventLog.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.PerformanceCounter.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Drawing.Common.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.IO.FileSystem.AccessControl.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Packaging.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.IO.Ports.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.AccessControl.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Cng.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Pkcs.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.ProtectedData.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Cryptography.Xml.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Permissions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Security.Principal.Windows.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceModel.Syndication.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.ServiceProcess.ServiceController.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encoding.CodePages.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.AccessControl.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.AssemblyReference.cache
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Form1.resources
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.Properties.Resources.resources
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.GenerateResource.cache
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CoreCompileInputs.cache
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.Fody.CopyLocal.cache
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.csproj.CopyComplete
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.exe
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.pdb
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Bcl.HashCode.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Abstractions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Connectors.AI.OpenAI.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Core.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.ActionPlanner.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.SequentialPlanner.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Planning.StepwisePlanner.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Reliability.Basic.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.Skills.Core.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Buffers.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Memory.Data.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Net.Http.Json.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Numerics.Vectors.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Encodings.Web.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Text.Json.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.Threading.Tasks.Extensions.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\System.ValueTuple.xml
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.exe.manifest
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\bin\Debug\ContentGenerator.application
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.exe.manifest
+H:\ContentGenerator\ContentGeneratorRelease\ContentGenerator\ContentGenerator\obj\Debug\ContentGenerator.application

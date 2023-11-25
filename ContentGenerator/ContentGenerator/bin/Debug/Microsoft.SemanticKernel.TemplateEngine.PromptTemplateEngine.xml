@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.SemanticKernel.TemplateEngine.PromptTemplateEngine</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block">
+            <summary>
+            Base class for blocks parsed from a prompt template
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block.Content">
+            <summary>
+            The block content
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block.Logger">
+            <summary>
+            App logger
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Base constructor. Prevent external instantiation.
+            </summary>
+            <param name="content">Block content</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block.IsValid(System.String@)">
+            <summary>
+            Check if the block content is valid.
+            </summary>
+            <param name="errorMsg">Error message in case the content is not valid</param>
+            <returns>True if the block content is valid</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock"/> class.
+            </summary>
+            <param name="content">Block content</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock.#ctor(System.Collections.Generic.List{Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block},System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock"/> class.
+            </summary>
+            <param name="tokens">A list of blocks</param>
+            <param name="content">Block content</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock.IsValid(System.String@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.CodeBlock.RenderCodeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ICodeRendering">
+            <summary>
+            Interface of dynamic blocks that need async IO to be rendered.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ICodeRendering.RenderCodeAsync(Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <summary>
+            Render the block using the given context, potentially using external I/O.
+            </summary>
+            <param name="context">SK execution context</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>Rendered content</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ITextRendering">
+            <summary>
+            Interface of static blocks that don't need async IO to be rendered.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ITextRendering.Render(Microsoft.SemanticKernel.Orchestration.ContextVariables)">
+            <summary>
+            Render the block using only the given variables.
+            </summary>
+            <param name="variables">Optional variables used to render the block</param>
+            <returns>Rendered content</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock">
+            <summary>
+            A <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block"/> that represents a named argument for a function call.
+            For example, in the template {{ MySkill.MyFunction var1="foo" }}, var1="foo" is a named arg block.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.Type">
+            <summary>
+            Returns the <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.BlockTypes"/>.
+            </summary>
+        </member>
+        <member name="P:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.Name">
+            <summary>
+            Gets the name of the function argument.
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock"/> class.
+            </summary>
+            <param name="text">Raw text parsed from the prompt template.</param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+            <exception cref="T:Microsoft.SemanticKernel.Diagnostics.SKException"></exception>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.GetValue(Microsoft.SemanticKernel.Orchestration.ContextVariables)">
+            <summary>
+            Gets the rendered value of the function argument. If the value is a <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ValBlock"/>, the value stays the same.
+            If the value is a <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.VarBlock"/>, the value of the variable is determined by the context variables passed in.
+            </summary>
+            <param name="variables">Variables to use for rendering the named argument value when the value is a <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.VarBlock"/>.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.Render(Microsoft.SemanticKernel.Orchestration.ContextVariables)">
+            <summary>
+            Renders the named arg block.
+            </summary>
+            <param name="variables"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.NamedArgBlock.IsValid(System.String@)">
+            <summary>
+            Returns whether the named arg block has valid syntax.
+            </summary>
+            <param name="errorMsg">An error message that gets set when the named arg block is not valid.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.ValBlock.#ctor(System.String,Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create an instance
+            </summary>
+            <param name="quotedValue">Block content, including the delimiting chars</param>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.CodeTokenizer">
+             <summary>
+             Simple tokenizer used for default SK template code language.
+            
+             BNF parsed by TemplateTokenizer:
+             [template]       ::= "" | [block] | [block] [template]
+             [block]          ::= [sk-block] | [text-block]
+             [sk-block]       ::= "{{" [variable] "}}" | "{{" [value] "}}" | "{{" [function-call] "}}"
+             [text-block]     ::= [any-char] | [any-char] [text-block]
+             [any-char]       ::= any char
+            
+             BNF parsed by CodeTokenizer:
+             [template]       ::= "" | [variable] " " [template] | [value] " " [template] | [function-call] " " [template]
+             [variable]       ::= "$" [valid-name]
+             [value]          ::= "'" [text] "'" | '"' [text] '"'
+             [function-call]  ::= [function-id] | [function-id] [parameter]
+             [parameter]      ::= [variable] | [value]
+            
+             BNF parsed by dedicated blocks
+             [function-id]    ::= [valid-name] | [valid-name] "." [valid-name]
+             [valid-name]     ::= [valid-symbol] | [valid-symbol] [valid-name]
+             [valid-symbol]   ::= [letter] | [digit] | "_"
+             [letter]         ::= "a" | "b" ... | "z" | "A" | "B" ... | "Z"
+             [digit]          ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+             </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.CodeTokenizer.Tokenize(System.String)">
+            <summary>
+            Tokenize a code block, without checking for syntax errors
+            </summary>
+            <param name="text">Text to parse</param>
+            <returns>A list of blocks</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine">
+            <summary>
+            Given a prompt, that might contain references to variables and functions:
+            - Get the list of references
+            - Resolve each reference
+              - Variable references are resolved using the context variables
+              - Function references are resolved invoking those functions
+                - Functions can be invoked passing in variables
+                - Functions do not receive the context variables, unless specified using a special variable
+                - Functions can be invoked in order and in parallel so the context variables must be immutable when invoked within the template
+            </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine"/> class.
+            </summary>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine.RenderAsync(System.String,Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine.ExtractBlocks(System.String,System.Boolean)">
+            <summary>
+            Given a prompt template string, extract all the blocks (text, variables, function calls)
+            </summary>
+            <param name="templateText">Prompt template (see skprompt.txt files)</param>
+            <param name="validate">Whether to validate the blocks syntax, or just return the blocks found, which could contain invalid code</param>
+            <returns>A list of all the blocks, ie the template tokenized in text, variables and function calls</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine.RenderAsync(System.Collections.Generic.IList{Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block},Microsoft.SemanticKernel.Orchestration.SKContext,System.Threading.CancellationToken)">
+            <summary>
+            Given a list of blocks render each block and compose the final result.
+            </summary>
+            <param name="blocks">Template blocks generated by ExtractBlocks.</param>
+            <param name="context">Access into the current kernel execution context.</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to monitor for cancellation requests. The default is <see cref="P:System.Threading.CancellationToken.None"/>.</param>
+            <returns>The prompt template ready to be used for an AI request.</returns>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.PromptTemplateEngine.RenderVariables(System.Collections.Generic.IList{Microsoft.SemanticKernel.TemplateEngine.Prompt.Blocks.Block},Microsoft.SemanticKernel.Orchestration.ContextVariables)">
+            <summary>
+            Given a list of blocks, render the Variable Blocks, replacing placeholders with the actual value in memory.
+            </summary>
+            <param name="blocks">List of blocks, typically all the blocks found in a template.</param>
+            <param name="variables">Container of all the temporary variables known to the kernel.</param>
+            <returns>An updated list of blocks where Variable Blocks have rendered to Text Blocks.</returns>
+        </member>
+        <member name="T:Microsoft.SemanticKernel.TemplateEngine.Prompt.TemplateTokenizer">
+             <summary>
+             Simple tokenizer used for default SK template language.
+            
+             BNF parsed by TemplateTokenizer:
+             [template]       ::= "" | [block] | [block] [template]
+             [block]          ::= [sk-block] | [text-block]
+             [sk-block]       ::= "{{" [variable] "}}" | "{{" [value] "}}" | "{{" [function-call] "}}"
+             [text-block]     ::= [any-char] | [any-char] [text-block]
+             [any-char]       ::= any char
+            
+             BNF parsed by CodeTokenizer:
+             [template]       ::= "" | [variable] " " [template] | [value] " " [template] | [function-call] " " [template]
+             [variable]       ::= "$" [valid-name]
+             [value]          ::= "'" [text] "'" | '"' [text] '"'
+             [function-call]  ::= [function-id] | [function-id] [parameter]
+             [parameter]      ::= [variable] | [value]
+            
+             BNF parsed by dedicated blocks
+             [function-id]    ::= [valid-name] | [valid-name] "." [valid-name]
+             [valid-name]     ::= [valid-symbol] | [valid-symbol] [valid-name]
+             [valid-symbol]   ::= [letter] | [digit] | "_"
+             [letter]         ::= "a" | "b" ... | "z" | "A" | "B" ... | "Z"
+             [digit]          ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+             </summary>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.TemplateTokenizer.#ctor(Microsoft.Extensions.Logging.ILoggerFactory)">
+            <summary>
+            Create a new instance of SK tokenizer
+            </summary>
+            <param name="loggerFactory">The <see cref="T:Microsoft.Extensions.Logging.ILoggerFactory"/> to use for logging. If null, no logging will be performed.</param>
+        </member>
+        <member name="M:Microsoft.SemanticKernel.TemplateEngine.Prompt.TemplateTokenizer.Tokenize(System.String)">
+            <summary>
+            Extract blocks from the given text
+            </summary>
+            <param name="text">Text to parse</param>
+            <returns>List of blocks found in the text</returns>
+        </member>
+    </members>
+</doc>
